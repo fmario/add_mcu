@@ -82,9 +82,14 @@ begin
   -----------------------------------------------------------------------------
   -- Update and register flags N, Z, C, O with valid ALU results
   -----------------------------------------------------------------------------
-  P_flag: process(clk)
+  P_flag: process(clk,rst)
   begin
-    if rising_edge(clk) then
+    if rst = '1' then
+      alu_out.flag(N) <= '0';
+      alu_out.flag(Z) <= '0';
+      alu_out.flag(C) <= '0';
+      alu_out.flag(O) <= '0';
+    elsif rising_edge(clk) then
       if alu_in.enb = '1' then
         -- N, updated with each operation -------------------------------------
         alu_out.flag(N) <= result_int(DW-1);

@@ -37,12 +37,12 @@ architecture rtl of rom is
       16#3# => OPC(ld)  & reg(7) & reg(3) & "-----",            -- ld r7, r3
       16#4# => OPC(add) & reg(0) & reg(5) & reg(4) & "--",      -- add r0, r5, r4
       16#5# => OPC(st)  & reg(0) & reg(1) & "-----",            -- st r0, r1
-      16#6# => OPC(sub) & reg(0) & reg(5) & reg(4) & "--",      -- sub r1, r5, r4
+      16#6# => OPC(sub) & reg(0) & reg(5) & reg(4) & "--",      -- sub r0, r5, r4
       16#7# => OPC(st)  & reg(0) & reg(2) & "-----",            -- st r0, r2
       16#8# => OPC(add) & reg(0) & reg(7) & reg(6) & "--",      -- add r0, r7, r6
       16#9# => OPC(st)  & reg(0) & reg(3) & "-----",            -- st r0, r3
-      16#A# => OPC(sub) & reg(0) & reg(7) & reg(6) & "--",      -- sub r1, r7, r6
-      16#B# => OPC(st)  & reg(0) & reg(0) & "-----",            -- st r0, r0
+      16#A# => OPC(sub) & reg(0) & reg(7) & reg(6) & "--",      -- sub r0, r7, r6
+      16#B# => OPC(st)  & reg(0) & reg(0) & "-----",            -- st r0, r1
          
          -- Consecutive XOR-instructions
 --         0  => OPC(xori)& reg(4) & reg(1) & reg(0) & "--",    -- r4 = r0 xor r1
