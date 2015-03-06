@@ -22,3 +22,4 @@ planAhead*
 *.m*
 *.i*
 !*.xise
+!*.wcfg

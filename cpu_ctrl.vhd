@@ -112,16 +112,30 @@ begin
           reg_out.enb_res <= '1';  
           alu_out.enb     <= '1';
           n_st            <= s_if; 
+        elsif v_opcode = 16 or v_opcode = 17 then
+          prc_out.enb     <= '1';
+          n_st            <= s_ma; 
         else
-          -- other instruction: ToDo !!!!!!!!!!!!!!!!!
-          n_st <= s_if;        
+          -- ToDo !!!!!!!!!!!!!!!!!!!!!!!!!
+          n_st <= s_if;
         end if;
       when s_ma =>
         -- memory access --------------------------------------------------------
-        null; -- ToDo !!!!!!!!!!!!!!!!!!!!!!!!!
+        if v_opcode = 16 then
+          -- load instruction
+          -- read data from memory and go to "Register Write-Back" state
+          n_st <= s_rw;
+        else
+          -- store instruction
+          -- write data from register to memory an start next instr. cycle
+          r_wb            <= '1';
+          n_st            <= s_if; 
+        end if;
       when s_rw =>
         -- register write-back -------------------------------------------------
-        null; -- ToDo !!!!!!!!!!!!!!!!!!!!!!!!!
+        -- store dat from memory in register and start next inst. cycle
+        reg_out.enb_data <= '1';
+        n_st <= s_if;
       when others =>
         n_st <= s_if; -- handle parasitic states
     end case;
