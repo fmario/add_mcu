@@ -53,13 +53,24 @@ architecture rtl of rom is
 16#05# => OPC(setil)& reg(7) & std_logic_vector(to_unsigned(16#00#,DW/2)),
 16#06# => OPC(setih)& reg(7) & std_logic_vector(to_unsigned(16#F0#,DW/2)),
        -- while loop starts here --------------------------------------------
-       --
-       --
-       -- ..... ToDo ..........
-       --
-       --
+       -- x += A
+16#07# => OPC(ld)   & reg(3) & reg(0) & "-----",        -- load r3 with x
+16#08# => OPC(add)  & reg(3) & reg(3) & reg(6) & "--",  -- add A to r3
+16#09# => OPC(st)   & reg(3) & reg(0) & "-----",        -- store result to x
+       -- y += B
+16#0A# => OPC(ld)   & reg(4) & reg(1) & "-----",        -- load r4 with y
+16#0B# => OPC(add)  & reg(4) & reg(4) & reg(7) & "--",  -- add B to r4
+16#0C# => OPC(st)   & reg(4) & reg(1) & "-----",        -- store result to y
+       -- z = x+y
+16#0D# => OPC(add)  & reg(5) & reg(3) & reg(4) & "--",  -- add x to y
+16#0E# => OPC(st)   & reg(5) & reg(2) & "-----",        -- store result to z
+       -- sign(z) == sign(x)
+16#0F# => OPC(bov)  & "---"  & std_logic_vector(to_unsigned(16#02#,DW/2)),
+       -- if no overflow occured, jump to start of while-loop
+16#10# => OPC(jmp)  & "---"  & std_logic_vector(to_unsigned(16#07#,DW/2)),    
        -- while loop ends here -----------------------------------------------
        -- fill remaining addresses with NOP
+16#11# => OPC(nop)  & "-----------",
 others => (others => '1')                        
        );
   

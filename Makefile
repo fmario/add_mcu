@@ -5,3 +5,6 @@ inst_set:
 
 xor:
 	./asmtovhdl.sh xor.asm rom.vhd
+
+task4:
+	./asmtovhdl.sh task4.asm rom.vhd
