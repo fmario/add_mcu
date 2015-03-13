@@ -1,7 +1,6 @@
 -------------------------------------------------------------------------------
 -- Entity: cpu_alu
 -- Author: Waj
--- Date  : 28-Feb-14
 -------------------------------------------------------------------------------
 -- Description:
 -- ALU for the RISC-CPU of the von-Neuman MCU.
@@ -16,8 +15,7 @@ use ieee.numeric_std.all;
 use work.mcu_pkg.all;
 
 entity cpu_alu is
-  port(rst      : in std_logic;
-       clk      : in std_logic;
+  port(clk      : in std_logic;
        -- CPU internal interfaces
        alu_in   : in  t_ctr2alu;
        alu_out  : out t_alu2ctr;
@@ -29,13 +27,13 @@ end cpu_alu;
 
 architecture rtl of cpu_alu is
 
-    signal result_int : std_logic_vector(DW-1 downto 0);
+  signal result_int : std_logic_vector(DW-1 downto 0);
   
 begin
-  
+
   -- output assignment
   result <= result_int;
-
+  
   -----------------------------------------------------------------------------
   -- ISE workaround (:-((
   -----------------------------------------------------------------------------
@@ -82,14 +80,9 @@ begin
   -----------------------------------------------------------------------------
   -- Update and register flags N, Z, C, O with valid ALU results
   -----------------------------------------------------------------------------
-  P_flag: process(clk,rst)
+  P_flag: process(clk)
   begin
-    if rst = '1' then
-      alu_out.flag(N) <= '0';
-      alu_out.flag(Z) <= '0';
-      alu_out.flag(C) <= '0';
-      alu_out.flag(O) <= '0';
-    elsif rising_edge(clk) then
+    if rising_edge(clk) then
       if alu_in.enb = '1' then
         -- N, updated with each operation -------------------------------------
         alu_out.flag(N) <= result_int(DW-1);
@@ -98,28 +91,31 @@ begin
         if to_integer(unsigned(result_int)) = 0 then
           alu_out.flag(Z) <= '1';
         end if;
+        -- C, updated with add/sub only ---------------------------------------
         if to_integer(unsigned(alu_in.op)) = 0 then
           -- add
-        -- C, updated with add/sub only ---------------------------------------
           alu_out.flag(C) <= (oper1(DW-1) and     oper2(DW-1))      or
                              (oper1(DW-1) and not result_int(DW-1)) or
                              (oper2(DW-1) and not result_int(DW-1));
-        -- O, updated with add/sub only --------------------------------------
-          alu_out.flag(O) <= (not oper1(DW-1) and not oper2(DW-1) and     result_int(DW-1)) or
-                             (    oper1(DW-1) and     oper2(DW-1) and not result_int(DW-1));                         
         elsif to_integer(unsigned(alu_in.op)) = 1 then
           -- sub
-        -- C, updated with add/sub only ---------------------------------------
           alu_out.flag(C) <= (oper2(DW-1)      and not oper1(DW-1))      or
                              (result_int(DW-1) and not oper1(DW-1))      or
                              (oper2(DW-1)      and     result_int(DW-1));
+        end if;
         -- O, updated with add/sub only --------------------------------------
+        if to_integer(unsigned(alu_in.op)) = 0 then
+          -- add
+          alu_out.flag(O) <= (not oper1(DW-1) and not oper2(DW-1) and     result_int(DW-1)) or
+                             (    oper1(DW-1) and     oper2(DW-1) and not result_int(DW-1));
+        elsif to_integer(unsigned(alu_in.op)) = 1 then
+          -- sub
           alu_out.flag(O) <= (    oper1(DW-1) and not oper2(DW-1) and not result_int(DW-1)) or
                              (not oper1(DW-1) and     oper2(DW-1) and     result_int(DW-1));
-        end if;
+        end if;     
       end if;
     end if;
   end process;
-  
+
 
 end rtl;

@@ -1,7 +1,6 @@
 -------------------------------------------------------------------------------
 -- Entity: rom
 -- Author: Waj
--- Date  : 11-May-13, 26-May-13
 -------------------------------------------------------------------------------
 -- Description:
 -- Program memory for simple von-Neumann MCU with registerd read data output.
@@ -28,31 +27,41 @@ architecture rtl of rom is
     ---------------------------------------------------------------------------
     -- program code -----------------------------------------------------------
     ---------------------------------------------------------------------------
-    -- addr    Opcode     Rdest    Rsrc1    Rsrc2              description
+    -- Opcode     Rdest    Rsrc1    Rsrc2                 description
     ---------------------------------------------------------------------------
-         -- Flag-testing with ADD/SUB commands
-      16#0# => OPC(ld)  & reg(4) & reg(0) & "-----",            -- ld r4, r0
-      16#1# => OPC(ld)  & reg(5) & reg(1) & "-----",            -- ld r5, r1
-      16#2# => OPC(ld)  & reg(6) & reg(2) & "-----",            -- ld r6, r2
-      16#3# => OPC(ld)  & reg(7) & reg(3) & "-----",            -- ld r7, r3
-      16#4# => OPC(add) & reg(0) & reg(5) & reg(4) & "--",      -- add r0, r5, r4
-      16#5# => OPC(st)  & reg(0) & reg(1) & "-----",            -- st r0, r1
-      16#6# => OPC(sub) & reg(0) & reg(5) & reg(4) & "--",      -- sub r0, r5, r4
-      16#7# => OPC(st)  & reg(0) & reg(2) & "-----",            -- st r0, r2
-      16#8# => OPC(add) & reg(0) & reg(7) & reg(6) & "--",      -- add r0, r7, r6
-      16#9# => OPC(st)  & reg(0) & reg(3) & "-----",            -- st r0, r3
-      16#A# => OPC(sub) & reg(0) & reg(7) & reg(6) & "--",      -- sub r0, r7, r6
-      16#B# => OPC(st)  & reg(0) & reg(0) & "-----",            -- st r0, r1
-         
-         -- Consecutive XOR-instructions
---         0  => OPC(xori)& reg(4) & reg(1) & reg(0) & "--",    -- r4 = r0 xor r1
---         1  => OPC(xori)& reg(5) & reg(3) & reg(2) & "--",    -- r5 = r2 xor r3
---         2  => OPC(xori)& reg(6) & reg(4) & reg(5) & "--",    -- r6 = r4 xor r5
---         3  => OPC(xori)& reg(7) & reg(6) & reg(0) & "--",    -- r7 = r6 xor r0
---         4  => OPC(nop) & "-----------",                      -- command xy
-
-      others    => (others => '1')                        
-         );
+       -- const A = 0xF001;
+       -- const B = 0xF000; // sign(A) = sign(B)
+       -- int x,y,z = 0;
+       -- while(sign(z) == sign(x)){
+       --    x += A;   // accumulate A
+       --    y += B;   // accumulate B 
+       --    z = x+y;  // N*(A+B)
+       -- }
+       --
+       --
+       -- set constant register values ---------------------------------------
+       -- RAM address of variable x hold in reg0
+16#00# => OPC(setil)& reg(0) & std_logic_vector(to_unsigned(16#40#,DW/2)), 
+       -- RAM address of variable y hold in reg1
+16#01# => OPC(setil)& reg(1) & std_logic_vector(to_unsigned(16#41#,DW/2)), 
+       -- RAM address of variable z hold in reg2
+16#02# => OPC(setil)& reg(2) & std_logic_vector(to_unsigned(16#42#,DW/2)),   
+       -- const A (0xF001) hold in reg6 (or load from ROM)
+16#03# => OPC(setil)& reg(6) & std_logic_vector(to_unsigned(16#01#,DW/2)),
+16#04# => OPC(setih)& reg(6) & std_logic_vector(to_unsigned(16#F0#,DW/2)),
+       -- const B (oxF000) hold in reg7 (or load from ROM)
+16#05# => OPC(setil)& reg(7) & std_logic_vector(to_unsigned(16#00#,DW/2)),
+16#06# => OPC(setih)& reg(7) & std_logic_vector(to_unsigned(16#F0#,DW/2)),
+       -- while loop starts here --------------------------------------------
+       --
+       --
+       -- ..... ToDo ..........
+       --
+       --
+       -- while loop ends here -----------------------------------------------
+       -- fill remaining addresses with NOP
+others => (others => '1')                        
+       );
   
 begin
 
