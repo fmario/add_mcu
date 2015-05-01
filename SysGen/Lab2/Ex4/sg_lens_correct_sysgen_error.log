@@ -1,0 +1,32 @@
+--------------------------------- Version Log ----------------------------------
+Version                                 Path
+System Generator 13.3                   C:/Xilinx/13.3/ISE_DS/ISE/sysgen
+Matlab 8.1.0.604 (R2013a)               C:/Program Files/MATLAB/R2013a
+ISE                                     C:/Xilinx/13.3/ISE_DS/ISE
+--------------------------------------------------------------------------------
+Summary of Errors:
+Error 0001: Design Rule Check Failed
+     Block: 'sg_lens_correct/FPGA_lens_correct/ System Generator'
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'sg_lens_correct/FPGA_lens_correct/ System Generator'
+
+Details:
+The "Simulink system period" setting on this System Generator
+token is not appropriate for the rates used in the design. 
+
+The current setting is:  1
+An appropriate setting is:  1/2
+
+Blocks with inappropriate periods included:
+  "sg_lens_correct/FPGA_lens_correct/video_data_o",  port: "dbl",
+ sample period: 1/2
+  "sg_lens_correct/FPGA_lens_correct/video_data_o",  port:
+"gw_out_inport",  sample period: 1/2
+  "sg_lens_correct/FPGA_lens_correct/Up Sample",  port: "q", 
+sample period: 1/2
+
+--------------------------------------------------------------------------------

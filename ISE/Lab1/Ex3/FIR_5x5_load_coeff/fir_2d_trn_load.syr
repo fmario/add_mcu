@@ -1,0 +1,832 @@
+Release 13.3 - xst O.76xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.26 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.26 secs
+ 
+--> Reading design: fir_2d_trn_load.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "fir_2d_trn_load.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "fir_2d_trn_load"
+Output Format                      : NGC
+Target Device                      : xc6slx150t-3-fgg676
+
+---- Source Options
+Top Module Name                    : fir_2d_trn_load
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Dexter\Git\addmcu\ISE\Lab1\Ex3\FIR_5x5_load_coeff\vhd\fir_2d_modules.vhd" into library work
+Parsing entity <MULT>.
+Parsing architecture <structural> of entity <mult>.
+Parsing entity <ADDER>.
+Parsing architecture <structural> of entity <adder>.
+Parsing entity <ABS_VAL>.
+Parsing architecture <structural> of entity <abs_val>.
+Parsing entity <Pipeline_Reg>.
+Parsing architecture <structural> of entity <pipeline_reg>.
+Parsing entity <CONVERT>.
+Parsing architecture <structural> of entity <convert>.
+Parsing VHDL file "C:\Users\Dexter\Git\addmcu\ISE\Lab1\Ex3\FIR_5x5_load_coeff\vhd\fir_1d_trn_load.vhd" into library work
+Parsing entity <fir_1d_trn_load>.
+Parsing architecture <Behavioral> of entity <fir_1d_trn_load>.
+Parsing VHDL file "C:\Users\Dexter\Git\addmcu\ISE\Lab1\Ex3\FIR_5x5_load_coeff\vhd\fir_2d_trn_load.vhd" into library work
+Parsing entity <fir_2d_trn_load>.
+Parsing architecture <Behavioral> of entity <fir_2d_trn_load>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <fir_2d_trn_load> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <fir_1d_trn_load> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <ADDER> (architecture <structural>) with generics from library <work>.
+
+Elaborating entity <ADDER> (architecture <structural>) with generics from library <work>.
+
+Elaborating entity <ADDER> (architecture <structural>) with generics from library <work>.
+
+Elaborating entity <Pipeline_Reg> (architecture <structural>) with generics from library <work>.
+
+Elaborating entity <Pipeline_Reg> (architecture <structural>) with generics from library <work>.
+
+Elaborating entity <ABS_VAL> (architecture <structural>) with generics from library <work>.
+
+Elaborating entity <MULT> (architecture <structural>) with generics from library <work>.
+
+Elaborating entity <CONVERT> (architecture <structural>) with generics from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <fir_2d_trn_load>.
+    Related source file is "c:/users/dexter/git/addmcu/ise/lab1/ex3/fir_5x5_load_coeff/vhd/fir_2d_trn_load.vhd".
+    Summary:
+	no macro.
+Unit <fir_2d_trn_load> synthesized.
+
+Synthesizing Unit <fir_1d_trn_load>.
+    Related source file is "c:/users/dexter/git/addmcu/ise/lab1/ex3/fir_5x5_load_coeff/vhd/fir_1d_trn_load.vhd".
+        IN_DW = 8
+        OUT_DW = 19
+        COEF_DW = 7
+        TAPS = 5
+        DELAY = 8
+    Found 8-bit register for signal <del_line<6>>.
+    Found 8-bit register for signal <del_line<5>>.
+    Found 8-bit register for signal <del_line<4>>.
+    Found 8-bit register for signal <del_line<3>>.
+    Found 8-bit register for signal <del_line<2>>.
+    Found 8-bit register for signal <del_line<1>>.
+    Found 8-bit register for signal <del_line<0>>.
+    Found 12-bit register for signal <inreg>.
+    Found 19-bit register for signal <stage<4>>.
+    Found 19-bit register for signal <stage<3>>.
+    Found 19-bit register for signal <stage<2>>.
+    Found 19-bit register for signal <stage<1>>.
+    Found 19-bit register for signal <stage<0>>.
+    Found 19-bit register for signal <out_data>.
+    Found 1-bit register for signal <load_reg>.
+    Found 1-bit register for signal <reload_coef>.
+    Found 1-bit register for signal <store_coef>.
+    Found 3-bit register for signal <cnt>.
+    Found 7-bit register for signal <coef_reg<1><4>>.
+    Found 7-bit register for signal <coef_reg<1><3>>.
+    Found 7-bit register for signal <coef_reg<1><2>>.
+    Found 7-bit register for signal <coef_reg<1><1>>.
+    Found 7-bit register for signal <coef_reg<1><0>>.
+    Found 7-bit register for signal <coef_reg<0><4>>.
+    Found 7-bit register for signal <coef_reg<0><3>>.
+    Found 7-bit register for signal <coef_reg<0><2>>.
+    Found 7-bit register for signal <coef_reg<0><1>>.
+    Found 7-bit register for signal <coef_reg<0><0>>.
+    Found 8-bit register for signal <del_line<7>>.
+    Found 19-bit adder for signal <inreg[11]_stage[4][18]_add_2_OUT> created at line 66.
+    Found 19-bit adder for signal <inreg[11]_stage[3][18]_add_4_OUT> created at line 66.
+    Found 19-bit adder for signal <inreg[11]_stage[2][18]_add_6_OUT> created at line 66.
+    Found 19-bit adder for signal <inreg[11]_stage[1][18]_add_8_OUT> created at line 66.
+    Found 3-bit subtractor for signal <GND_6_o_GND_6_o_sub_47_OUT<2:0>> created at line 1308.
+    Found 12x7-bit multiplier for signal <inreg[11]_coef_reg[0][4][6]_MuLt_0_OUT> created at line 64.
+    Found 12x7-bit multiplier for signal <n0210> created at line 66.
+    Found 12x7-bit multiplier for signal <n0213> created at line 66.
+    Found 12x7-bit multiplier for signal <n0216> created at line 66.
+    Found 12x7-bit multiplier for signal <n0219> created at line 66.
+    Summary:
+	inferred   5 Multiplier(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred 266 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <fir_1d_trn_load> synthesized.
+
+Synthesizing Unit <ADDER_1>.
+    Related source file is "c:/users/dexter/git/addmcu/ise/lab1/ex3/fir_5x5_load_coeff/vhd/fir_2d_modules.vhd".
+        DW_IN = 19
+    Found 20-bit register for signal <SUM_OUT>.
+    Found 20-bit adder for signal <IN_Sign1[19]_IN_Sign2[19]_add_2_OUT> created at line 93.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+Unit <ADDER_1> synthesized.
+
+Synthesizing Unit <ADDER_2>.
+    Related source file is "c:/users/dexter/git/addmcu/ise/lab1/ex3/fir_5x5_load_coeff/vhd/fir_2d_modules.vhd".
+        DW_IN = 20
+    Found 21-bit register for signal <SUM_OUT>.
+    Found 21-bit adder for signal <IN_Sign1[20]_IN_Sign2[20]_add_2_OUT> created at line 93.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  21 D-type flip-flop(s).
+Unit <ADDER_2> synthesized.
+
+Synthesizing Unit <ADDER_3>.
+    Related source file is "c:/users/dexter/git/addmcu/ise/lab1/ex3/fir_5x5_load_coeff/vhd/fir_2d_modules.vhd".
+        DW_IN = 21
+    Found 22-bit register for signal <SUM_OUT>.
+    Found 22-bit adder for signal <IN_Sign1[21]_IN_Sign2[21]_add_2_OUT> created at line 93.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  22 D-type flip-flop(s).
+Unit <ADDER_3> synthesized.
+
+Synthesizing Unit <Pipeline_Reg_1>.
+    Related source file is "c:/users/dexter/git/addmcu/ise/lab1/ex3/fir_5x5_load_coeff/vhd/fir_2d_modules.vhd".
+        DW_IN = 19
+    Found 19-bit register for signal <Q>.
+    Summary:
+	inferred  19 D-type flip-flop(s).
+Unit <Pipeline_Reg_1> synthesized.
+
+Synthesizing Unit <Pipeline_Reg_2>.
+    Related source file is "c:/users/dexter/git/addmcu/ise/lab1/ex3/fir_5x5_load_coeff/vhd/fir_2d_modules.vhd".
+        DW_IN = 20
+    Found 20-bit register for signal <Q>.
+    Summary:
+	inferred  20 D-type flip-flop(s).
+Unit <Pipeline_Reg_2> synthesized.
+
+Synthesizing Unit <ABS_VAL>.
+    Related source file is "c:/users/dexter/git/addmcu/ise/lab1/ex3/fir_5x5_load_coeff/vhd/fir_2d_modules.vhd".
+        DW = 22
+    Found 22-bit register for signal <VAL_OUT>.
+    Found 22-bit register for signal <OutReg>.
+    Found 22-bit adder for signal <VAL_IN[21]_GND_13_o_add_1_OUT> created at line 1241.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  44 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <ABS_VAL> synthesized.
+
+Synthesizing Unit <MULT>.
+    Related source file is "c:/users/dexter/git/addmcu/ise/lab1/ex3/fir_5x5_load_coeff/vhd/fir_2d_modules.vhd".
+        DW_IN_1 = 22
+        DW_IN_2 = 20
+        DELAY = 3
+    Found 42-bit register for signal <DelayLine<1>>.
+    Found 42-bit register for signal <DelayLine<0>>.
+    Found 42-bit register for signal <PRODUCT_OUT>.
+    Found 42-bit register for signal <DelayLine<2>>.
+    Found 22x20-bit multiplier for signal <FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT> created at line 48.
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred 168 D-type flip-flop(s).
+Unit <MULT> synthesized.
+
+Synthesizing Unit <CONVERT>.
+    Related source file is "c:/users/dexter/git/addmcu/ise/lab1/ex3/fir_5x5_load_coeff/vhd/fir_2d_modules.vhd".
+        DW_IN = 42
+        DW_OUT = 8
+        BIN_PNT = 17
+WARNING:Xst:647 - Input <din<16:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <dout>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <CONVERT> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 26
+ 12x7-bit multiplier                                   : 25
+ 22x20-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 30
+ 19-bit adder                                          : 20
+ 20-bit adder                                          : 2
+ 21-bit adder                                          : 1
+ 22-bit adder                                          : 2
+ 3-bit subtractor                                      : 5
+# Registers                                            : 159
+ 1-bit register                                        : 15
+ 12-bit register                                       : 5
+ 19-bit register                                       : 32
+ 20-bit register                                       : 3
+ 21-bit register                                       : 1
+ 22-bit register                                       : 3
+ 3-bit register                                        : 5
+ 42-bit register                                       : 4
+ 7-bit register                                        : 50
+ 8-bit register                                        : 41
+# Multiplexers                                         : 11
+ 22-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 10
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <inreg_8> in Unit <FIR_5x5[0].fir_N> is equivalent to the following 3 FFs/Latches, which will be removed : <inreg_9> <inreg_10> <inreg_11> 
+INFO:Xst:2261 - The FF/Latch <inreg_8> in Unit <FIR_5x5[1].fir_N> is equivalent to the following 3 FFs/Latches, which will be removed : <inreg_9> <inreg_10> <inreg_11> 
+INFO:Xst:2261 - The FF/Latch <inreg_8> in Unit <FIR_5x5[2].fir_N> is equivalent to the following 3 FFs/Latches, which will be removed : <inreg_9> <inreg_10> <inreg_11> 
+INFO:Xst:2261 - The FF/Latch <inreg_8> in Unit <FIR_5x5[3].fir_N> is equivalent to the following 3 FFs/Latches, which will be removed : <inreg_9> <inreg_10> <inreg_11> 
+INFO:Xst:2261 - The FF/Latch <inreg_8> in Unit <FIR_5x5[4].fir_N> is equivalent to the following 3 FFs/Latches, which will be removed : <inreg_9> <inreg_10> <inreg_11> 
+WARNING:Xst:1293 - FF/Latch <inreg_8> has a constant value of 0 in block <FIR_5x5[0].fir_N>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <inreg_8> has a constant value of 0 in block <FIR_5x5[1].fir_N>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <inreg_8> has a constant value of 0 in block <FIR_5x5[2].fir_N>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <inreg_8> has a constant value of 0 in block <FIR_5x5[3].fir_N>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <inreg_8> has a constant value of 0 in block <FIR_5x5[4].fir_N>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <DelayLine_2_0> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_2_1> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_2_2> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_2_3> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_2_4> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_2_5> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_2_6> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_2_7> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_2_8> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_2_9> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_2_10> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_2_11> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_2_12> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_2_13> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_2_14> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_2_15> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_2_16> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_1_0> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_1_1> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_1_2> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_1_3> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_1_4> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_1_5> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_1_6> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_1_7> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_1_8> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_1_9> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_1_10> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_1_11> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_1_12> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_1_13> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_1_14> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_1_15> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_1_16> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_0_0> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_0_1> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_0_2> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_0_3> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_0_4> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_0_5> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_0_6> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_0_7> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_0_8> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_0_9> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_0_10> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_0_11> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_0_12> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_0_13> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_0_14> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_0_15> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <DelayLine_0_16> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <PRODUCT_OUT_0> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <PRODUCT_OUT_1> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <PRODUCT_OUT_2> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <PRODUCT_OUT_3> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <PRODUCT_OUT_4> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <PRODUCT_OUT_5> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <PRODUCT_OUT_6> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <PRODUCT_OUT_7> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <PRODUCT_OUT_8> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <PRODUCT_OUT_9> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <PRODUCT_OUT_10> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <PRODUCT_OUT_11> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <PRODUCT_OUT_12> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <PRODUCT_OUT_13> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <PRODUCT_OUT_14> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <PRODUCT_OUT_15> of sequential type is unconnected in block <MULT_1>.
+WARNING:Xst:2677 - Node <PRODUCT_OUT_16> of sequential type is unconnected in block <MULT_1>.
+
+Synthesizing (advanced) Unit <MULT>.
+	Found pipelined multiplier on signal <FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT>:
+		- 4 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT by adding 3 register level(s).
+Unit <MULT> synthesized (advanced).
+
+Synthesizing (advanced) Unit <fir_1d_trn_load>.
+	Multiplier <Mmult_n0219> in block <fir_1d_trn_load> and adder/subtractor <Madd_inreg[11]_stage[1][18]_add_8_OUT> in block <fir_1d_trn_load> are combined into a MAC<Maddsub_n0219>.
+	The following registers are also absorbed by the MAC: <stage_0> in block <fir_1d_trn_load>.
+	Multiplier <Mmult_n0216> in block <fir_1d_trn_load> and adder/subtractor <Madd_inreg[11]_stage[2][18]_add_6_OUT> in block <fir_1d_trn_load> are combined into a MAC<Maddsub_n0216>.
+	The following registers are also absorbed by the MAC: <stage_1> in block <fir_1d_trn_load>.
+	Multiplier <Mmult_n0213> in block <fir_1d_trn_load> and adder/subtractor <Madd_inreg[11]_stage[3][18]_add_4_OUT> in block <fir_1d_trn_load> are combined into a MAC<Maddsub_n0213>.
+	The following registers are also absorbed by the MAC: <stage_2> in block <fir_1d_trn_load>.
+	Multiplier <Mmult_inreg[11]_coef_reg[0][4][6]_MuLt_0_OUT> in block <fir_1d_trn_load> and adder/subtractor <Madd_inreg[11]_stage[4][18]_add_2_OUT> in block <fir_1d_trn_load> are combined into a MAC<Maddsub_inreg[11]_coef_reg[0][4][6]_MuLt_0_OUT>.
+	The following registers are also absorbed by the MAC: <stage_4> in block <fir_1d_trn_load>, <stage_3> in block <fir_1d_trn_load>.
+Unit <fir_1d_trn_load> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# MACs                                                 : 20
+ 12x7-to-19-bit MAC                                    : 20
+# Multipliers                                          : 6
+ 12x7-bit multiplier                                   : 5
+ 22x20-bit registered multiplier                       : 1
+# Adders/Subtractors                                   : 10
+ 20-bit adder                                          : 2
+ 21-bit adder                                          : 1
+ 22-bit adder                                          : 2
+ 3-bit subtractor                                      : 5
+# Registers                                            : 1048
+ Flip-Flops                                            : 1048
+# Multiplexers                                         : 11
+ 22-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 10
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <inreg_8> has a constant value of 0 in block <fir_1d_trn_load>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <inreg_9> has a constant value of 0 in block <fir_1d_trn_load>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <inreg_10> has a constant value of 0 in block <fir_1d_trn_load>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <inreg_11> has a constant value of 0 in block <fir_1d_trn_load>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <fir_2d_trn_load> ...
+
+Optimizing unit <Pipeline_Reg_2> ...
+
+Optimizing unit <ADDER_1> ...
+
+Optimizing unit <ADDER_2> ...
+
+Optimizing unit <ADDER_3> ...
+
+Optimizing unit <Pipeline_Reg_1> ...
+
+Optimizing unit <fir_1d_trn_load> ...
+
+Optimizing unit <ABS_VAL> ...
+
+Optimizing unit <CONVERT> ...
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT4_16> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT4_15> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT4_14> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT4_13> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT4_12> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT4_11> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT4_10> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT4_9> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT4_8> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT4_7> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT4_6> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT4_5> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT4_4> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT4_3> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT4_2> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT4_1> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT4_0> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT5_16> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT5_15> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT5_14> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT5_13> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT5_12> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT5_11> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT5_10> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT5_9> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT5_8> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT5_7> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT5_6> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT5_5> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT5_4> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT5_3> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT5_2> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT5_1> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT5_0> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT6_16> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT6_15> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT6_14> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT6_13> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT6_12> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT6_11> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT6_10> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT6_9> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT6_8> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT6_7> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT6_6> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT6_5> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT6_4> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT6_3> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT6_2> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT6_1> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:2677 - Node <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT6_0> of sequential type is unconnected in block <fir_2d_trn_load>.
+WARNING:Xst:1710 - FF/Latch <ABS_1/OutReg_21> (without init value) has a constant value of 0 in block <fir_2d_trn_load>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ABS_1/VAL_OUT_21> (without init value) has a constant value of 0 in block <fir_2d_trn_load>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block fir_2d_trn_load, actual ratio is 1.
+
+Final Macro Processing ...
+
+Processing Unit <fir_2d_trn_load> :
+	Found 2-bit shift register for signal <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT8_16>.
+	Found 2-bit shift register for signal <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT8_15>.
+	Found 2-bit shift register for signal <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT8_14>.
+	Found 2-bit shift register for signal <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT8_13>.
+	Found 2-bit shift register for signal <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT8_12>.
+	Found 2-bit shift register for signal <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT8_11>.
+	Found 2-bit shift register for signal <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT8_10>.
+	Found 2-bit shift register for signal <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT8_9>.
+	Found 2-bit shift register for signal <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT8_8>.
+	Found 2-bit shift register for signal <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT8_7>.
+	Found 2-bit shift register for signal <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT8_6>.
+	Found 2-bit shift register for signal <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT8_5>.
+	Found 2-bit shift register for signal <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT8_4>.
+	Found 2-bit shift register for signal <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT8_3>.
+	Found 2-bit shift register for signal <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT8_2>.
+	Found 2-bit shift register for signal <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT8_1>.
+	Found 2-bit shift register for signal <MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT8_0>.
+	Found 7-bit shift register for signal <FIR_5x5[4].fir_N/del_line_1_7>.
+	Found 7-bit shift register for signal <FIR_5x5[4].fir_N/del_line_1_6>.
+	Found 7-bit shift register for signal <FIR_5x5[4].fir_N/del_line_1_5>.
+	Found 7-bit shift register for signal <FIR_5x5[4].fir_N/del_line_1_4>.
+	Found 7-bit shift register for signal <FIR_5x5[4].fir_N/del_line_1_3>.
+	Found 7-bit shift register for signal <FIR_5x5[4].fir_N/del_line_1_2>.
+	Found 7-bit shift register for signal <FIR_5x5[4].fir_N/del_line_1_1>.
+	Found 7-bit shift register for signal <FIR_5x5[4].fir_N/del_line_1_0>.
+	Found 7-bit shift register for signal <FIR_5x5[3].fir_N/del_line_1_7>.
+	Found 7-bit shift register for signal <FIR_5x5[3].fir_N/del_line_1_6>.
+	Found 7-bit shift register for signal <FIR_5x5[3].fir_N/del_line_1_5>.
+	Found 7-bit shift register for signal <FIR_5x5[3].fir_N/del_line_1_4>.
+	Found 7-bit shift register for signal <FIR_5x5[3].fir_N/del_line_1_3>.
+	Found 7-bit shift register for signal <FIR_5x5[3].fir_N/del_line_1_2>.
+	Found 7-bit shift register for signal <FIR_5x5[3].fir_N/del_line_1_1>.
+	Found 7-bit shift register for signal <FIR_5x5[3].fir_N/del_line_1_0>.
+	Found 7-bit shift register for signal <FIR_5x5[2].fir_N/del_line_1_7>.
+	Found 7-bit shift register for signal <FIR_5x5[2].fir_N/del_line_1_6>.
+	Found 7-bit shift register for signal <FIR_5x5[2].fir_N/del_line_1_5>.
+	Found 7-bit shift register for signal <FIR_5x5[2].fir_N/del_line_1_4>.
+	Found 7-bit shift register for signal <FIR_5x5[2].fir_N/del_line_1_3>.
+	Found 7-bit shift register for signal <FIR_5x5[2].fir_N/del_line_1_2>.
+	Found 7-bit shift register for signal <FIR_5x5[2].fir_N/del_line_1_1>.
+	Found 7-bit shift register for signal <FIR_5x5[2].fir_N/del_line_1_0>.
+	Found 7-bit shift register for signal <FIR_5x5[1].fir_N/del_line_1_7>.
+	Found 7-bit shift register for signal <FIR_5x5[1].fir_N/del_line_1_6>.
+	Found 7-bit shift register for signal <FIR_5x5[1].fir_N/del_line_1_5>.
+	Found 7-bit shift register for signal <FIR_5x5[1].fir_N/del_line_1_4>.
+	Found 7-bit shift register for signal <FIR_5x5[1].fir_N/del_line_1_3>.
+	Found 7-bit shift register for signal <FIR_5x5[1].fir_N/del_line_1_2>.
+	Found 7-bit shift register for signal <FIR_5x5[1].fir_N/del_line_1_1>.
+	Found 7-bit shift register for signal <FIR_5x5[1].fir_N/del_line_1_0>.
+	Found 7-bit shift register for signal <FIR_5x5[0].fir_N/del_line_1_7>.
+	Found 7-bit shift register for signal <FIR_5x5[0].fir_N/del_line_1_6>.
+	Found 7-bit shift register for signal <FIR_5x5[0].fir_N/del_line_1_5>.
+	Found 7-bit shift register for signal <FIR_5x5[0].fir_N/del_line_1_4>.
+	Found 7-bit shift register for signal <FIR_5x5[0].fir_N/del_line_1_3>.
+	Found 7-bit shift register for signal <FIR_5x5[0].fir_N/del_line_1_2>.
+	Found 7-bit shift register for signal <FIR_5x5[0].fir_N/del_line_1_1>.
+	Found 7-bit shift register for signal <FIR_5x5[0].fir_N/del_line_1_0>.
+	Found 2-bit shift register for signal <ABS_1/VAL_OUT_20>.
+	Found 2-bit shift register for signal <ABS_1/VAL_OUT_19>.
+	Found 2-bit shift register for signal <ABS_1/VAL_OUT_18>.
+	Found 2-bit shift register for signal <ABS_1/VAL_OUT_17>.
+	Found 2-bit shift register for signal <REG_2/Q_18>.
+	Found 2-bit shift register for signal <REG_2/Q_17>.
+	Found 2-bit shift register for signal <REG_2/Q_16>.
+	Found 2-bit shift register for signal <REG_2/Q_15>.
+	Found 2-bit shift register for signal <REG_2/Q_14>.
+	Found 2-bit shift register for signal <REG_2/Q_13>.
+	Found 2-bit shift register for signal <REG_2/Q_12>.
+	Found 2-bit shift register for signal <REG_2/Q_11>.
+	Found 2-bit shift register for signal <REG_2/Q_10>.
+	Found 2-bit shift register for signal <REG_2/Q_9>.
+	Found 2-bit shift register for signal <REG_2/Q_8>.
+	Found 2-bit shift register for signal <REG_2/Q_7>.
+	Found 2-bit shift register for signal <REG_2/Q_6>.
+	Found 2-bit shift register for signal <REG_2/Q_5>.
+	Found 2-bit shift register for signal <REG_2/Q_4>.
+	Found 2-bit shift register for signal <REG_2/Q_3>.
+	Found 2-bit shift register for signal <REG_2/Q_2>.
+	Found 2-bit shift register for signal <REG_2/Q_1>.
+	Found 2-bit shift register for signal <REG_2/Q_0>.
+Unit <fir_2d_trn_load> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 391
+ Flip-Flops                                            : 391
+# Shift Registers                                      : 80
+ 2-bit shift register                                  : 40
+ 7-bit shift register                                  : 40
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : fir_2d_trn_load.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 404
+#      GND                         : 1
+#      INV                         : 20
+#      LUT1                        : 4
+#      LUT2                        : 85
+#      LUT3                        : 32
+#      LUT4                        : 15
+#      LUT5                        : 10
+#      LUT6                        : 33
+#      MUXCY                       : 99
+#      VCC                         : 1
+#      XORCY                       : 104
+# FlipFlops/Latches                : 463
+#      FD                          : 10
+#      FDE                         : 430
+#      FDRE                        : 10
+#      FDSE                        : 13
+# Shift Registers                  : 80
+#      SRLC16E                     : 80
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 81
+#      IBUF                        : 73
+#      OBUF                        : 8
+# DSPs                             : 29
+#      DSP48A1                     : 29
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx150tfgg676-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             463  out of  184304     0%  
+ Number of Slice LUTs:                  279  out of  92152     0%  
+    Number used as Logic:               199  out of  92152     0%  
+    Number used as Memory:               80  out of  21680     0%  
+       Number used as SRL:               80
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    554
+   Number with an unused Flip Flop:      91  out of    554    16%  
+   Number with an unused LUT:           275  out of    554    49%  
+   Number of fully used LUT-FF pairs:   188  out of    554    33%  
+   Number of unique control sets:        34
+
+IO Utilization: 
+ Number of IOs:                          82
+ Number of bonded IOBs:                  82  out of    396    20%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                     29  out of    180    16%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk_1                              | BUFGP                  | 572   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 8.516ns (Maximum Frequency: 117.427MHz)
+   Minimum input arrival time before clock: 4.970ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_1'
+  Clock period: 8.516ns (frequency: 117.427MHz)
+  Total number of paths / destination ports: 8607 / 2294
+-------------------------------------------------------------------------
+Delay:               8.516ns (Levels of Logic = 1)
+  Source:            MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT (DSP)
+  Destination:       MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT2 (DSP)
+  Source Clock:      clk_1 rising
+  Destination Clock: clk_1 rising
+
+  Data Path: MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT to MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     DSP48A1:CLK->P47     18   3.373   1.049  MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT (MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT_P47_to_MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT1)
+     DSP48A1:C30->PCOUT47    1   2.689   0.000  MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT1 (MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT1_PCOUT_to_MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT2_PCIN_47)
+     DSP48A1:PCIN47            1.405          MULT_1/Mmult_FACTOR_1_BUF[21]_FACTOR_2_BUF[19]_MuLt_2_OUT2
+    ----------------------------------------
+    Total                      8.516ns (7.467ns logic, 1.049ns route)
+                                       (87.7% logic, 12.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_1'
+  Total number of paths / destination ports: 1082 / 857
+-------------------------------------------------------------------------
+Offset:              4.970ns (Levels of Logic = 2)
+  Source:            ce_1 (PAD)
+  Destination:       CONV_1/dout_7 (FF)
+  Destination Clock: clk_1 rising
+
+  Data Path: ce_1 to CONV_1/dout_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           428   1.222   2.311  ce_1_IBUF (ce_1_IBUF)
+     LUT3:I0->O            8   0.205   0.802  CONV_1/_n00115 (CONV_1/_n0011)
+     FDSE:S                    0.430          CONV_1/dout_0
+    ----------------------------------------
+    Total                      4.970ns (1.857ns logic, 3.113ns route)
+                                       (37.4% logic, 62.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_1'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            CONV_1/dout_7 (FF)
+  Destination:       dout<7> (PAD)
+  Source Clock:      clk_1 rising
+
+  Data Path: CONV_1/dout_7 to dout<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q             1   0.447   0.579  CONV_1/dout_7 (CONV_1/dout_7)
+     OBUF:I->O                 2.571          dout_7_OBUF (dout<7>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_1          |    8.516|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 16.82 secs
+ 
+--> 
+
+Total memory usage is 264292 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  131 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+

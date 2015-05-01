@@ -1,0 +1,3 @@
+vhdl work "vhd/fir_2d_modules.vhd"
+vhdl work "vhd/fir_1d_trn_load.vhd"
+vhdl work "vhd/fir_2d_trn_load.vhd"
