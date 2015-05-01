@@ -20,7 +20,7 @@ K = 0.00004;
 IPM = 0;
 % Latency in # of cc
 LT_AdrGen = 1;
-LT_IdxCalc = 9;
+LT_IdxCalc = 13;
 LT_IdxInpol = 3;
 LT_PingPong = 2;
 LT_PxlInpol = 1;

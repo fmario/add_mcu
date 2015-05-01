@@ -1,16 +1,16 @@
 Model {
   Name			  "sg_lens_correct"
-  Version		  8.2
+  Version		  8.1
   MdlSubVersion		  0
-  SavedCharacterEncoding  "windows-1252"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.464"
+    ComputedModelVersion    "1.465"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
+  SavedCharacterEncoding  "windows-1252"
   SaveDefaultBlockParams  on
   ScopeRefreshTime	  0.035000
   OverrideScopeRefreshTime on
@@ -30,7 +30,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-8.0, -8.0, 1538.0, 916.0]
+      Location		      [-1688.0, -158.0, 1696.0, 1066.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -45,7 +45,7 @@ Model {
 	$PropName		"ExplorerBarInfo"
 	$ObjectID		4
 	$ClassName		"Simulink.ExplorerBarInfo"
-	Visible			[0]
+	Visible			[1]
       }
       Array {
 	Type			"Simulink.EditorInfo"
@@ -55,7 +55,7 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "744"
-	  Extents		  [459.0, 517.0]
+	  Extents		  [1295.0, 739.0]
 	  ZoomFactor		  [1.59]
 	  Offset		  [-5.6843418860808015e-14, 0.0]
 	}
@@ -63,10 +63,10 @@ Model {
 	  $ObjectID		  6
 	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "9"
-	  Extents		  [1295.0, 769.0]
-	  ZoomFactor		  [1.01]
-	  Offset		  [0.0, 0.0]
+	  LoadSaveID		  "758"
+	  Extents		  [1453.0, 889.0]
+	  ZoomFactor		  [1.0]
+	  Offset		  [-136.60000000000002, -132.39999999999998]
 	}
 	PropName		"EditorsInfo"
       }
@@ -76,11 +76,11 @@ Model {
   Creator		  "sps"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "tawassne"
+  LastModifiedBy	  "Dexter"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Apr 24 20:15:33 2015"
-  RTWModifiedTimeStamp	  351807330
-  ModelVersionFormat	  "1.%<AutoIncrement:464>"
+  LastModifiedDate	  "Fri May 01 16:16:25 2015"
+  RTWModifiedTimeStamp	  352397782
+  ModelVersionFormat	  "1.%<AutoIncrement:465>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -106,11 +106,6 @@ Model {
   BrowserShowLibraryLinks off
   BrowserLookUnderMasks	  off
   SimulationMode	  "normal"
-  PauseTimes		  "5"
-  NumberOfSteps		  1
-  SnapshotBufferSize	  10
-  SnapshotInterval	  10
-  NumberOfLastSnapshots	  0
   LinearizationMsg	  "none"
   Profile		  off
   ParamWorkspaceSource	  "MATLABWorkspace"
@@ -143,7 +138,6 @@ Model {
   CovNameIncrementing	  off
   CovHtmlReporting	  on
   CovForceBlockReductionOff on
-  CovEnableCumulative	  on
   covSaveCumulativeToWorkspaceVar on
   CovSaveSingleToWorkspaceVar on
   CovCumulativeVarName	  "covCumulativeData"
@@ -180,13 +174,13 @@ Model {
     Dimension		    1
     Simulink.ConfigSet {
       $ObjectID		      8
-      Version		      "1.13.1"
+      Version		      "1.13.0"
       Array {
 	Type			"Handle"
 	Dimension		8
 	Simulink.SolverCC {
 	  $ObjectID		  9
-	  Version		  "1.13.1"
+	  Version		  "1.13.0"
 	  StartTime		  "0.0"
 	  StopTime		  "3*Npxl"
 	  AbsTol		  "auto"
@@ -221,7 +215,7 @@ Model {
 	}
 	Simulink.DataIOCC {
 	  $ObjectID		  10
-	  Version		  "1.13.1"
+	  Version		  "1.13.0"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
 	  FinalStateName	  "xFinal"
@@ -253,7 +247,7 @@ Model {
 	}
 	Simulink.OptimizationCC {
 	  $ObjectID		  11
-	  Version		  "1.13.1"
+	  Version		  "1.13.0"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    4
@@ -269,7 +263,6 @@ Model {
 	  InlineParams		  off
 	  UseIntDivNetSlope	  off
 	  UseFloatMulNetSlope	  off
-	  DefaultUnderspecifiedDataType	"double"
 	  UseSpecifiedMinMax	  off
 	  InlineInvariantSignals  off
 	  OptimizeBlockIOStorage  on
@@ -289,7 +282,6 @@ Model {
 	  SystemCodeInlineAuto	  off
 	  StateBitsets		  off
 	  DataBitsets		  off
-	  ActiveStateOutputEnumStorageType "Native Integer"
 	  UseTempVars		  off
 	  ZeroExternalMemoryAtStartup on
 	  ZeroInternalMemoryAtStartup on
@@ -307,7 +299,7 @@ Model {
 	}
 	Simulink.DebuggingCC {
 	  $ObjectID		  12
-	  Version		  "1.13.1"
+	  Version		  "1.13.0"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
 	  ArrayBoundsChecking	  "none"
@@ -397,7 +389,7 @@ Model {
 	}
 	Simulink.HardwareCC {
 	  $ObjectID		  13
-	  Version		  "1.13.1"
+	  Version		  "1.13.0"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
 	  ProdBitPerInt		  32
@@ -438,7 +430,7 @@ Model {
 	}
 	Simulink.ModelReferenceCC {
 	  $ObjectID		  14
-	  Version		  "1.13.1"
+	  Version		  "1.13.0"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
 	  EnableParallelModelReferenceBuilds off
@@ -453,7 +445,7 @@ Model {
 	}
 	Simulink.SFSimCC {
 	  $ObjectID		  15
-	  Version		  "1.13.1"
+	  Version		  "1.13.0"
 	  SFSimEnableDebug	  on
 	  SFSimOverflowDetection  on
 	  SFSimEcho		  on
@@ -464,12 +456,11 @@ Model {
 	  SimUseLocalCustomCode	  off
 	  SimParseCustomCode	  on
 	  SimBuildMode		  "sf_incremental_build"
-	  SimGenImportedTypeDefs  off
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
 	  $ObjectID		  16
-	  Version		  "1.13.1"
+	  Version		  "1.13.0"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    1
@@ -477,15 +468,11 @@ Model {
 	    PropName		    "DisabledProps"
 	  }
 	  SystemTargetFile	  "grt.tlc"
-	  TLCOptions		  ""
 	  GenCodeOnly		  off
 	  MakeCommand		  "make_rtw"
 	  GenerateMakefile	  on
 	  PackageGeneratedCodeAndArtifacts off
-	  PackageName		  ""
 	  TemplateMakefile	  "grt_default_tmf"
-	  PostCodeGenCommand	  ""
-	  Description		  ""
 	  GenerateReport	  off
 	  SaveLog		  off
 	  RTWVerbose		  on
@@ -496,20 +483,9 @@ Model {
 	  TLCAssert		  off
 	  ProcessScriptMode	  "Default"
 	  ConfigurationMode	  "Optimized"
-	  ProcessScript		  ""
-	  ConfigurationScript	  ""
 	  ConfigAtBuild		  off
 	  RTWUseLocalCustomCode	  off
 	  RTWUseSimCustomCode	  off
-	  CustomSourceCode	  ""
-	  CustomHeaderCode	  ""
-	  CustomInclude		  ""
-	  CustomSource		  ""
-	  CustomLibrary		  ""
-	  CustomInitializer	  ""
-	  CustomTerminator	  ""
-	  Toolchain		  "Automatically locate an installed toolchain"
-	  BuildConfiguration	  "Faster Builds"
 	  IncludeHyperlinkInReport off
 	  LaunchReport		  off
 	  PortableWordSizes	  off
@@ -533,17 +509,14 @@ Model {
 	  GenerateCodeMetricsReport off
 	  GenerateCodeReplacementReport	off
 	  RTWCompilerOptimization "Off"
-	  RTWCustomCompilerOptimizations ""
 	  CheckMdlBeforeBuild	  "Off"
 	  CustomRebuildMode	  "OnUpdate"
-	  DataInitializer	  ""
-	  SharedConstantsCachingThreshold 1024
 	  Array {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
 	      $ObjectID		      17
-	      Version		      "1.13.1"
+	      Version		      "1.13.0"
 	      Array {
 		Type			"Cell"
 		Dimension		9
@@ -582,7 +555,6 @@ Model {
 	      CustomSymbolStrBlkIO    "rtb_$N$M"
 	      CustomSymbolStrTmpVar   "$N$M"
 	      CustomSymbolStrMacro    "$R$N$M"
-	      CustomSymbolStrUtil     "$N$C"
 	      DefineNamingRule	      "None"
 	      ParamNamingRule	      "None"
 	      SignalNamingRule	      "None"
@@ -599,7 +571,7 @@ Model {
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
 	      $ObjectID		      18
-	      Version		      "1.13.1"
+	      Version		      "1.13.0"
 	      Array {
 		Type			"Cell"
 		Dimension		11
@@ -845,7 +817,6 @@ Model {
       SFBlockType	      "NONE"
       Variant		      off
       GeneratePreprocessorConditionals off
-      ContentPreviewEnabled   off
     }
     Block {
       BlockType		      ToWorkspace
@@ -874,7 +845,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "116"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "1104"
+    SIDHighWatermark	    "1109"
     Block {
       BlockType		      SubSystem
       Name		      "FPGA_lens_correct"
@@ -892,8 +863,8 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"FPGA_lens_correct"
-	Location		[-8, -8, 1530, 908]
-	Open			on
+	Location		[-1688, -158, 8, 908]
+	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	212
 	ScreenColor		"[0.952941, 0.952941, 0.952941]"
@@ -966,7 +937,6 @@ Model {
 	  UserData		  "DataTag0"
 	  SourceBlock		  "xbsIndex_r4/ System Generator"
 	  SourceType		  "Xilinx System Generator Block"
-	  ContentPreviewEnabled	  off
 	  infoedit		  " System Generator"
 	  xilinxfamily		  "spartan6"
 	  part			  "xc6slx150t"
@@ -1019,7 +989,7 @@ Model {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Address Generation"
-	    Location		    [138, 270, 840, 934]
+	    Location		    [-1288, -75, 250, 841]
 	    Open		    on
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    200
@@ -1315,86 +1285,72 @@ Model {
 	      IconDisplay	      "Port number"
 	    }
 	    Line {
-	      ZOrder		      1
 	      SrcBlock		      "Column\nCounter"
 	      SrcPort		      1
 	      Points		      [20, 0]
 	      Branch {
-		ZOrder			2
 		Points			[0, -65]
 		DstBlock		"Adder"
 		DstPort			2
 	      }
 	      Branch {
-		ZOrder			3
 		DstBlock		"D2"
 		DstPort			1
 	      }
 	    }
 	    Line {
-	      ZOrder		      4
 	      SrcBlock		      "Row\nCounter"
 	      SrcPort		      1
 	      Points		      [20, 0]
 	      Branch {
-		ZOrder			5
 		Points			[0, 55]
 		DstBlock		"Const Mult"
 		DstPort			1
 	      }
 	      Branch {
-		ZOrder			6
 		DstBlock		"D1"
 		DstPort			1
 	      }
 	    }
 	    Line {
-	      ZOrder		      7
 	      SrcBlock		      "Const Mult"
 	      SrcPort		      1
 	      DstBlock		      "Adder"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      8
 	      SrcBlock		      "Vsync"
 	      SrcPort		      1
 	      DstBlock		      "Row\nCounter"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      9
 	      SrcBlock		      "Adder"
 	      SrcPort		      1
 	      DstBlock		      "cur_lin_addr"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      10
 	      SrcBlock		      "Hsync"
 	      SrcPort		      1
 	      Points		      [55, 0]
 	      Branch {
-		ZOrder			11
 		DstBlock		"Column\nCounter"
 		DstPort			1
 	      }
 	      Branch {
-		ZOrder			12
 		Points			[0, -150]
 		DstBlock		"Row\nCounter"
 		DstPort			2
 	      }
 	    }
 	    Line {
-	      ZOrder		      13
 	      SrcBlock		      "D1"
 	      SrcPort		      1
 	      DstBlock		      "cur_row_index"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      14
 	      SrcBlock		      "D2"
 	      SrcPort		      1
 	      DstBlock		      "cur_col_index"
@@ -2050,7 +2006,7 @@ Model {
 	  BlockType		  SubSystem
 	  Name			  "Index Calculation"
 	  SID			  "758"
-	  Ports			  [3, 2]
+	  Ports			  [2, 2]
 	  Position		  [410, 171, 530, 349]
 	  ZOrder		  -28
 	  BackgroundColor	  "orange"
@@ -2063,8 +2019,8 @@ Model {
 	  MaskHideContents	  off
 	  System {
 	    Name		    "Index Calculation"
-	    Location		    [1592, -8, 2632, 776]
-	    Open		    off
+	    Location		    [-1688, -158, 8, 908]
+	    Open		    on
 	    ModelBrowserVisibility  on
 	    ModelBrowserWidth	    212
 	    ScreenColor		    "white"
@@ -2075,7 +2031,7 @@ Model {
 	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "125"
+	    ZoomFactor		    "100"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "cur_row_index"
@@ -2094,15 +2050,6 @@ Model {
 	      IconDisplay	      "Port number"
 	    }
 	    Block {
-	      BlockType		      Inport
-	      Name		      "cur_lin_addr"
-	      SID		      "763"
-	      Position		      [105, 558, 135, 572]
-	      ZOrder		      -3
-	      Port		      "3"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
 	      BlockType		      Reference
 	      Name		      "Adder"
 	      SID		      "882"
@@ -2117,7 +2064,7 @@ Model {
 	      use_carryin	      off
 	      use_carryout	      off
 	      en		      off
-	      latency		      "5"
+	      latency		      "1"
 	      precision		      "User Defined"
 	      arith_type	      "Signed  (2's comp)"
 	      n_bits		      "ceil(log2(ImgY))+1"
@@ -2133,7 +2080,7 @@ Model {
 	      has_advanced_control    "0"
 	      sggui_pos		      "425,278,505,320"
 	      block_type	      "addsub"
-	      sg_icon_stat	      "55,55,2,1,white,blue,0,e195bcbb,right,,[ ],[ ]"
+	      sg_icon_stat	      "55,55,2,1,white,blue,0,8a00a986,right,,[ ],[ ]"
 	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 55 55 0 0 ],[0 0 55 55 0 ],[0.77 0"
 	      ".82 0.91 ]);\nplot([0 55 55 0 0 ],[0 0 55 55 0 ]);\npatch([11.425 21.54 28.54 35.54 42.54 28.54 18.425 11.425 ]"
 	      ",[34.77 34.77 41.77 34.77 41.77 41.77 41.77 34.77 ],[1 1 1 ]);\npatch([18.425 28.54 21.54 11.425 18.425 ],[27.7"
@@ -2141,7 +2088,7 @@ Model {
 	      "7 27.77 20.77 ],[1 1 1 ]);\npatch([18.425 42.54 35.54 28.54 21.54 11.425 18.425 ],[13.77 13.77 20.77 13.77 20.7"
 	      "7 20.77 13.77 ],[0.931 0.946 0.973 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin i"
 	      "con text');\ncolor('black');port_label('input',1,'a');\ncolor('black');port_label('input',2,'b');\ncolor('black"
-	      "');port_label('output',1,'\\bf{a - b}','texmode','on');\ncolor('black');disp('z^{-5}\\newline ','texmode','on')"
+	      "');port_label('output',1,'\\bf{a - b}','texmode','on');\ncolor('black');disp('z^{-1}\\newline ','texmode','on')"
 	      ";\ncolor('black');disp(' \\newline\\bf{}','texmode','on');\nfprintf('','COMMENT: end icon text');"
 	    }
 	    Block {
@@ -2201,7 +2148,7 @@ Model {
 	      use_carryin	      off
 	      use_carryout	      off
 	      en		      off
-	      latency		      "5"
+	      latency		      "1"
 	      precision		      "User Defined"
 	      arith_type	      "Signed  (2's comp)"
 	      n_bits		      "ceil(log2(ImgX))+1"
@@ -2217,7 +2164,7 @@ Model {
 	      has_advanced_control    "0"
 	      sggui_pos		      "442,440,348,310"
 	      block_type	      "addsub"
-	      sg_icon_stat	      "55,55,2,1,white,blue,0,e195bcbb,right,,[ ],[ ]"
+	      sg_icon_stat	      "55,55,2,1,white,blue,0,8a00a986,right,,[ ],[ ]"
 	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 55 55 0 0 ],[0 0 55 55 0 ],[0.77 0"
 	      ".82 0.91 ]);\nplot([0 55 55 0 0 ],[0 0 55 55 0 ]);\npatch([11.425 21.54 28.54 35.54 42.54 28.54 18.425 11.425 ]"
 	      ",[34.77 34.77 41.77 34.77 41.77 41.77 41.77 34.77 ],[1 1 1 ]);\npatch([18.425 28.54 21.54 11.425 18.425 ],[27.7"
@@ -2225,7 +2172,7 @@ Model {
 	      "7 27.77 20.77 ],[1 1 1 ]);\npatch([18.425 42.54 35.54 28.54 21.54 11.425 18.425 ],[13.77 13.77 20.77 13.77 20.7"
 	      "7 20.77 13.77 ],[0.931 0.946 0.973 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin i"
 	      "con text');\ncolor('black');port_label('input',1,'a');\ncolor('black');port_label('input',2,'b');\ncolor('black"
-	      "');port_label('output',1,'\\bf{a - b}','texmode','on');\ncolor('black');disp('z^{-5}\\newline ','texmode','on')"
+	      "');port_label('output',1,'\\bf{a - b}','texmode','on');\ncolor('black');disp('z^{-1}\\newline ','texmode','on')"
 	      ";\ncolor('black');disp(' \\newline\\bf{}','texmode','on');\nfprintf('','COMMENT: end icon text');"
 	    }
 	    Block {
@@ -2275,7 +2222,7 @@ Model {
 	      Name		      "Adder4"
 	      SID		      "902"
 	      Ports		      [2, 1]
-	      Position		      [455, 450, 510, 505]
+	      Position		      [455, 470, 510, 525]
 	      ZOrder		      -8
 	      ShowName		      off
 	      LibraryVersion	      "1.2"
@@ -2310,6 +2257,49 @@ Model {
 	      "7 20.77 13.77 ],[0.931 0.946 0.973 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin i"
 	      "con text');\ncolor('black');port_label('input',1,'a');\ncolor('black');port_label('input',2,'b');\ncolor('black"
 	      "');port_label('output',1,'\\bf{a - b}','texmode','on');\ncolor('black');disp('z^{-1}\\newline ','texmode','on')"
+	      ";\ncolor('black');disp(' \\newline\\bf{}','texmode','on');\nfprintf('','COMMENT: end icon text');"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Adder5"
+	      SID		      "1107"
+	      Ports		      [2, 1]
+	      Position		      [355, 390, 410, 445]
+	      ZOrder		      10
+	      BlockMirror	      on
+	      ShowName		      off
+	      LibraryVersion	      "1.2"
+	      SourceBlock	      "xbsIndex_r4/AddSub"
+	      SourceType	      "Xilinx Adder/Subtracter Block"
+	      mode		      "Addition"
+	      use_carryin	      off
+	      use_carryout	      off
+	      en		      off
+	      latency		      "1"
+	      precision		      "Full"
+	      arith_type	      "Unsigned"
+	      n_bits		      "ceil(log2(ImgX))+15"
+	      bin_pt		      "15"
+	      quantization	      "Round  (unbiased: +/- Inf)"
+	      overflow		      "Wrap"
+	      dbl_ovrd		      off
+	      use_behavioral_HDL      off
+	      hw_selection	      "Fabric"
+	      pipelined		      off
+	      xl_use_area	      off
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "442,440,348,310"
+	      block_type	      "addsub"
+	      sg_icon_stat	      "55,55,2,1,white,blue,0,e85d8a90,left,,[ ],[ ]"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 55 55 0 0 ],[0 0 55 55 0 ],[0.77 0"
+	      ".82 0.91 ]);\nplot([0 55 55 0 0 ],[0 0 55 55 0 ]);\npatch([11.425 21.54 28.54 35.54 42.54 28.54 18.425 11.425 ]"
+	      ",[34.77 34.77 41.77 34.77 41.77 41.77 41.77 34.77 ],[1 1 1 ]);\npatch([18.425 28.54 21.54 11.425 18.425 ],[27.7"
+	      "7 27.77 34.77 34.77 27.77 ],[0.931 0.946 0.973 ]);\npatch([11.425 21.54 28.54 18.425 11.425 ],[20.77 20.77 27.7"
+	      "7 27.77 20.77 ],[1 1 1 ]);\npatch([18.425 42.54 35.54 28.54 21.54 11.425 18.425 ],[13.77 13.77 20.77 13.77 20.7"
+	      "7 20.77 13.77 ],[0.931 0.946 0.973 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin i"
+	      "con text');\ncolor('black');port_label('input',1,'a');\ncolor('black');port_label('input',2,'b');\ncolor('black"
+	      "');port_label('output',1,'\\bf{a + b}','texmode','on');\ncolor('black');disp('z^{-1}\\newline ','texmode','on')"
 	      ";\ncolor('black');disp(' \\newline\\bf{}','texmode','on');\nfprintf('','COMMENT: end icon text');"
 	    }
 	    Block {
@@ -2350,10 +2340,74 @@ Model {
 	    }
 	    Block {
 	      BlockType		      Reference
+	      Name		      "Delay"
+	      SID		      "1108"
+	      Ports		      [1, 1]
+	      Position		      [470, 207, 495, 233]
+	      ZOrder		      11
+	      LibraryVersion	      "1.2"
+	      SourceBlock	      "xbsIndex_r4/Delay"
+	      SourceType	      "Xilinx Delay Block"
+	      infoedit		      "Hardware notes: A delay line is a chain, each link of which is an SRL16 followed by a flip-flo"
+	      "p."
+	      rst		      off
+	      infoeditControl	      "Selection of Reset will increase slice count due to use of real FFs and instead of SRLs"
+	      en		      off
+	      latency		      "8"
+	      dbl_ovrd		      off
+	      reg_retiming	      off
+	      xl_use_area	      off
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "delay"
+	      sg_icon_stat	      "25,26,1,1,white,blue,0,e47f993a,right,,[ ],[ ]"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 25 25 0 0 ],[0 0 26 26 0 ],[0.77 0"
+	      ".82 0.91 ]);\nplot([0 25 25 0 0 ],[0 0 26 26 0 ]);\npatch([5.325 9.66 12.66 15.66 18.66 12.66 8.325 5.325 ],[16"
+	      ".33 16.33 19.33 16.33 19.33 19.33 19.33 16.33 ],[1 1 1 ]);\npatch([8.325 12.66 9.66 5.325 8.325 ],[13.33 13.33 "
+	      "16.33 16.33 13.33 ],[0.931 0.946 0.973 ]);\npatch([5.325 9.66 12.66 8.325 5.325 ],[10.33 10.33 13.33 13.33 10.3"
+	      "3 ],[1 1 1 ]);\npatch([8.325 18.66 15.66 12.66 9.66 5.325 8.325 ],[7.33 7.33 10.33 7.33 10.33 10.33 7.33 ],[0.9"
+	      "31 0.946 0.973 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin icon text');\n\n\ncol"
+	      "or('black');disp('z^{-8}','texmode','on');\nfprintf('','COMMENT: end icon text');"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Delay1"
+	      SID		      "1109"
+	      Ports		      [1, 1]
+	      Position		      [470, 292, 495, 318]
+	      ZOrder		      12
+	      LibraryVersion	      "1.2"
+	      SourceBlock	      "xbsIndex_r4/Delay"
+	      SourceType	      "Xilinx Delay Block"
+	      infoedit		      "Hardware notes: A delay line is a chain, each link of which is an SRL16 followed by a flip-flo"
+	      "p."
+	      rst		      off
+	      infoeditControl	      "Selection of Reset will increase slice count due to use of real FFs and instead of SRLs"
+	      en		      off
+	      latency		      "8"
+	      dbl_ovrd		      off
+	      reg_retiming	      off
+	      xl_use_area	      off
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      has_advanced_control    "0"
+	      sggui_pos		      "-1,-1,-1,-1"
+	      block_type	      "delay"
+	      sg_icon_stat	      "25,26,1,1,white,blue,0,e47f993a,right,,[ ],[ ]"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 25 25 0 0 ],[0 0 26 26 0 ],[0.77 0"
+	      ".82 0.91 ]);\nplot([0 25 25 0 0 ],[0 0 26 26 0 ]);\npatch([5.325 9.66 12.66 15.66 18.66 12.66 8.325 5.325 ],[16"
+	      ".33 16.33 19.33 16.33 19.33 19.33 19.33 16.33 ],[1 1 1 ]);\npatch([8.325 12.66 9.66 5.325 8.325 ],[13.33 13.33 "
+	      "16.33 16.33 13.33 ],[0.931 0.946 0.973 ]);\npatch([5.325 9.66 12.66 8.325 5.325 ],[10.33 10.33 13.33 13.33 10.3"
+	      "3 ],[1 1 1 ]);\npatch([8.325 18.66 15.66 12.66 9.66 5.325 8.325 ],[7.33 7.33 10.33 7.33 10.33 10.33 7.33 ],[0.9"
+	      "31 0.946 0.973 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin icon text');\n\n\ncol"
+	      "or('black');disp('z^{-8}','texmode','on');\nfprintf('','COMMENT: end icon text');"
+	    }
+	    Block {
+	      BlockType		      Reference
 	      Name		      "Mult"
 	      SID		      "897"
 	      Ports		      [2, 1]
-	      Position		      [330, 500, 385, 555]
+	      Position		      [330, 520, 385, 575]
 	      ZOrder		      -9
 	      ShowName		      off
 	      LibraryVersion	      "1.2"
@@ -2491,45 +2545,97 @@ Model {
 	    }
 	    Block {
 	      BlockType		      Reference
-	      Name		      "Radius ROM (r^2)"
-	      SID		      "802"
-	      Ports		      [1, 1]
-	      Position		      [185, 540, 270, 590]
-	      ZOrder		      -12
+	      Name		      "Mult3"
+	      SID		      "1105"
+	      Ports		      [2, 1]
+	      Position		      [355, 230, 410, 285]
+	      ZOrder		      8
+	      ShowName		      off
 	      LibraryVersion	      "1.2"
-	      SourceBlock	      "xbsIndex_r4/ROM"
-	      SourceType	      "Xilinx Single Port Read-Only Memory Block"
-	      depth		      "Npxl"
-	      initVector	      "Radius_ROM"
-	      distributed_mem	      "Block RAM"
-	      rst		      off
-	      init_reg		      "0"
+	      SourceBlock	      "xbsIndex_r4/Mult"
+	      SourceType	      "Xilinx Multiplier Block"
+	      infoedit		      "Hardware notes: To check for the optimum internal pipeline stages of the dedicated multiplier "
+	      "you must select 'Test for optimum pipelining'.<br><br>Optimization Goal: For implementation into device fabric "
+	      "(LUTs), the Speed or Area optimization will take effect only if it's supported by IP for the particular device "
+	      "family. Otherwise, the results will be identical regardless of the selection."
+	      precision		      "Full"
+	      arith_type	      "Signed  (2's comp)"
+	      n_bits		      "16"
+	      bin_pt		      "14"
+	      quantization	      "Truncate"
+	      overflow		      "Wrap"
 	      en		      off
-	      latency		      "1"
-	      gui_display_data_type   "Fixed-point"
-	      arith_type	      "Unsigned"
-	      n_bits		      "ceil(log2(max(max(Radius_ROM))+1)) + 1"
-	      bin_pt		      "1"
-	      preci_type	      "Single"
-	      exp_width		      "8"
-	      frac_width	      "24"
+	      latency		      "3"
 	      dbl_ovrd		      off
-	      optimize		      "Area"
-	      use_rpm		      on
+	      use_behavioral_HDL      off
+	      opt		      "Speed"
+	      use_embedded	      on
+	      optimum_pipeline	      off
 	      xl_use_area	      off
 	      xl_area		      "[0,0,0,0,0,0,0]"
+	      pipeline		      "on"
+	      use_rpm		      "on"
+	      placement_style	      "Triangular"
 	      has_advanced_control    "0"
-	      sggui_pos		      "-214,104,1600,848"
-	      block_type	      "sprom"
-	      sg_icon_stat	      "85,50,1,1,white,blue,0,bbc23d60,right,,[ ],[ ]"
-	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 85 85 0 0 ],[0 0 50 50 0 ],[0.77 0"
-	      ".82 0.91 ]);\nplot([0 85 85 0 0 ],[0 0 50 50 0 ]);\npatch([26.425 36.54 43.54 50.54 57.54 43.54 33.425 26.425 ]"
-	      ",[32.77 32.77 39.77 32.77 39.77 39.77 39.77 32.77 ],[1 1 1 ]);\npatch([33.425 43.54 36.54 26.425 33.425 ],[25.7"
-	      "7 25.77 32.77 32.77 25.77 ],[0.931 0.946 0.973 ]);\npatch([26.425 36.54 43.54 33.425 26.425 ],[18.77 18.77 25.7"
-	      "7 25.77 18.77 ],[1 1 1 ]);\npatch([33.425 57.54 50.54 43.54 36.54 26.425 33.425 ],[11.77 11.77 18.77 11.77 18.7"
-	      "7 18.77 11.77 ],[0.931 0.946 0.973 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin i"
-	      "con text');\ncolor('black');port_label('input',1,'addr');\n\ncolor('black');disp('z^{-1}','texmode','on');\nfpr"
-	      "intf('','COMMENT: end icon text');"
+	      sggui_pos		      "617,192,348,574"
+	      block_type	      "mult"
+	      sg_icon_stat	      "55,55,2,1,white,blue,0,7028354c,right,,[ ],[ ]"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 55 55 0 0 ],[0 0 55 55 0 ],[0.77 0"
+	      ".82 0.91 ]);\nplot([0 55 55 0 0 ],[0 0 55 55 0 ]);\npatch([11.425 21.54 28.54 35.54 42.54 28.54 18.425 11.425 ]"
+	      ",[34.77 34.77 41.77 34.77 41.77 41.77 41.77 34.77 ],[1 1 1 ]);\npatch([18.425 28.54 21.54 11.425 18.425 ],[27.7"
+	      "7 27.77 34.77 34.77 27.77 ],[0.931 0.946 0.973 ]);\npatch([11.425 21.54 28.54 18.425 11.425 ],[20.77 20.77 27.7"
+	      "7 27.77 20.77 ],[1 1 1 ]);\npatch([18.425 42.54 35.54 28.54 21.54 11.425 18.425 ],[13.77 13.77 20.77 13.77 20.7"
+	      "7 20.77 13.77 ],[0.931 0.946 0.973 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin i"
+	      "con text');\ncolor('black');port_label('input',1,'a');\ncolor('black');port_label('input',2,'b');\ncolor('black"
+	      "');port_label('output',1,'\\bfa \\times b','texmode','on');\ncolor('black');disp('z^{-3}\\newline ','texmode','"
+	      "on');\ncolor('black');disp(' \\n ');\nfprintf('','COMMENT: end icon text');"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Mult4"
+	      SID		      "1106"
+	      Ports		      [2, 1]
+	      Position		      [355, 320, 410, 375]
+	      ZOrder		      9
+	      ShowName		      off
+	      LibraryVersion	      "1.2"
+	      SourceBlock	      "xbsIndex_r4/Mult"
+	      SourceType	      "Xilinx Multiplier Block"
+	      infoedit		      "Hardware notes: To check for the optimum internal pipeline stages of the dedicated multiplier "
+	      "you must select 'Test for optimum pipelining'.<br><br>Optimization Goal: For implementation into device fabric "
+	      "(LUTs), the Speed or Area optimization will take effect only if it's supported by IP for the particular device "
+	      "family. Otherwise, the results will be identical regardless of the selection."
+	      precision		      "Full"
+	      arith_type	      "Signed  (2's comp)"
+	      n_bits		      "16"
+	      bin_pt		      "14"
+	      quantization	      "Truncate"
+	      overflow		      "Wrap"
+	      en		      off
+	      latency		      "3"
+	      dbl_ovrd		      off
+	      use_behavioral_HDL      off
+	      opt		      "Speed"
+	      use_embedded	      on
+	      optimum_pipeline	      off
+	      xl_use_area	      off
+	      xl_area		      "[0,0,0,0,0,0,0]"
+	      pipeline		      "on"
+	      use_rpm		      "on"
+	      placement_style	      "Triangular"
+	      has_advanced_control    "0"
+	      sggui_pos		      "617,192,348,574"
+	      block_type	      "mult"
+	      sg_icon_stat	      "55,55,2,1,white,blue,0,7028354c,right,,[ ],[ ]"
+	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 55 55 0 0 ],[0 0 55 55 0 ],[0.77 0"
+	      ".82 0.91 ]);\nplot([0 55 55 0 0 ],[0 0 55 55 0 ]);\npatch([11.425 21.54 28.54 35.54 42.54 28.54 18.425 11.425 ]"
+	      ",[34.77 34.77 41.77 34.77 41.77 41.77 41.77 34.77 ],[1 1 1 ]);\npatch([18.425 28.54 21.54 11.425 18.425 ],[27.7"
+	      "7 27.77 34.77 34.77 27.77 ],[0.931 0.946 0.973 ]);\npatch([11.425 21.54 28.54 18.425 11.425 ],[20.77 20.77 27.7"
+	      "7 27.77 20.77 ],[1 1 1 ]);\npatch([18.425 42.54 35.54 28.54 21.54 11.425 18.425 ],[13.77 13.77 20.77 13.77 20.7"
+	      "7 20.77 13.77 ],[0.931 0.946 0.973 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin i"
+	      "con text');\ncolor('black');port_label('input',1,'a');\ncolor('black');port_label('input',2,'b');\ncolor('black"
+	      "');port_label('output',1,'\\bfa \\times b','texmode','on');\ncolor('black');disp('z^{-3}\\newline ','texmode','"
+	      "on');\ncolor('black');disp(' \\n ');\nfprintf('','COMMENT: end icon text');"
 	    }
 	    Block {
 	      BlockType		      Reference
@@ -2576,7 +2682,7 @@ Model {
 	      Name		      "Xcent Offset1"
 	      SID		      "903"
 	      Ports		      [0, 1]
-	      Position		      [365, 448, 400, 482]
+	      Position		      [365, 468, 400, 502]
 	      ZOrder		      -14
 	      ShowName		      off
 	      LibraryVersion	      "1.2"
@@ -2737,7 +2843,7 @@ Model {
 	      BlockType		      From
 	      Name		      "aaa3"
 	      SID		      "967"
-	      Position		      [185, 502, 250, 528]
+	      Position		      [185, 522, 250, 548]
 	      ZOrder		      -18
 	      ShowName		      off
 	      GotoTag		      "K"
@@ -2866,80 +2972,46 @@ Model {
 	      IconDisplay	      "Port number"
 	    }
 	    Line {
-	      ZOrder		      1
-	      SrcBlock		      "cur_lin_addr"
-	      SrcPort		      1
-	      DstBlock		      "Radius ROM (r^2)"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      2
-	      SrcBlock		      "Radius ROM (r^2)"
-	      SrcPort		      1
-	      Points		      [9, 0]
-	      Branch {
-		ZOrder			66
-		Points			[0, 120]
-		DstBlock		"lin_addr"
-		DstPort			1
-	      }
-	      Branch {
-		ZOrder			34
-		Points			[1, 0; 0, -25]
-		DstBlock		"Mult"
-		DstPort			2
-	      }
-	    }
-	    Line {
-	      ZOrder		      3
 	      SrcBlock		      "cur_row_index"
 	      SrcPort		      1
 	      Points		      [8, 0]
 	      Branch {
-		ZOrder			64
 		Points			[0, 450]
 		DstBlock		"row_idx"
 		DstPort			1
 	      }
 	      Branch {
-		ZOrder			32
 		DstBlock		"Adder"
 		DstPort			1
 	      }
 	    }
 	    Line {
-	      ZOrder		      4
 	      SrcBlock		      "Ycent Offset"
 	      SrcPort		      1
 	      DstBlock		      "Adder"
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      5
 	      SrcBlock		      "Xcent Offset"
 	      SrcPort		      1
 	      DstBlock		      "Adder2"
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      6
 	      SrcBlock		      "cur_col_index"
 	      SrcPort		      1
 	      Points		      [19, 0]
 	      Branch {
-		ZOrder			62
 		Points			[0, 335]
 		DstBlock		"col_idx"
 		DstPort			1
 	      }
 	      Branch {
-		ZOrder			30
 		DstBlock		"Adder2"
 		DstPort			1
 	      }
 	    }
 	    Line {
-	      ZOrder		      7
 	      SrcBlock		      "Mult"
 	      SrcPort		      1
 	      Points		      [30, 0; 0, -40]
@@ -2947,87 +3019,104 @@ Model {
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      8
 	      SrcBlock		      "Xcent Offset1"
 	      SrcPort		      1
 	      DstBlock		      "Adder4"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      9
 	      SrcBlock		      "Adder2"
 	      SrcPort		      1
-	      DstBlock		      "Mult1"
-	      DstPort		      1
+	      Points		      [10, 0]
+	      Branch {
+		Points			[0, 30]
+		Branch {
+		  Points		  [0, 25]
+		  DstBlock		  "Mult4"
+		  DstPort		  2
+		}
+		Branch {
+		  DstBlock		  "Mult4"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		DstBlock		"Delay1"
+		DstPort			1
+	      }
 	    }
 	    Line {
-	      ZOrder		      10
 	      SrcBlock		      "Adder4"
 	      SrcPort		      1
-	      Points		      [35, 0; 0, -150]
+	      Points		      [35, 0; 0, -170]
 	      Branch {
-		ZOrder			11
 		Points			[0, -85]
 		DstBlock		"Mult2"
 		DstPort			2
 	      }
 	      Branch {
-		ZOrder			12
 		DstBlock		"Mult1"
 		DstPort			2
 	      }
 	    }
 	    Line {
-	      ZOrder		      13
 	      SrcBlock		      "Adder"
 	      SrcPort		      1
-	      DstBlock		      "Mult2"
-	      DstPort		      1
+	      Points		      [11, 0]
+	      Branch {
+		Points			[0, 25]
+		Branch {
+		  Points		  [0, 25]
+		  DstBlock		  "Mult3"
+		  DstPort		  2
+		}
+		Branch {
+		  DstBlock		  "Mult3"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		DstBlock		"Delay"
+		DstPort			1
+	      }
 	    }
 	    Line {
-	      ZOrder		      14
 	      SrcBlock		      "Ycent Offset1"
 	      SrcPort		      1
 	      DstBlock		      "Adder1"
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      15
 	      SrcBlock		      "Xcent Offset2"
 	      SrcPort		      1
 	      DstBlock		      "Adder3"
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      16
 	      SrcBlock		      "Mult2"
 	      SrcPort		      1
 	      DstBlock		      "Adder1"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      17
 	      SrcBlock		      "Adder1"
 	      SrcPort		      1
 	      DstBlock		      "dist_row_index"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      18
 	      SrcBlock		      "Mult1"
 	      SrcPort		      1
 	      DstBlock		      "Adder3"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      19
 	      SrcBlock		      "Adder3"
 	      SrcPort		      1
 	      DstBlock		      "dist_col_index"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      20
 	      SrcBlock		      "aaa3"
 	      SrcPort		      1
 	      DstBlock		      "Mult"
@@ -3035,7 +3124,6 @@ Model {
 	    }
 	    Line {
 	      Name		      "col_idx"
-	      ZOrder		      63
 	      Labels		      [0, 0]
 	      SrcBlock		      "col_idx"
 	      SrcPort		      1
@@ -3043,25 +3131,61 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      65
 	      SrcBlock		      "row_idx"
 	      SrcPort		      1
 	      DstBlock		      "Debug Scope"
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      67
 	      SrcBlock		      "lin_addr"
 	      SrcPort		      1
 	      DstBlock		      "Debug Scope"
 	      DstPort		      3
 	    }
+	    Line {
+	      SrcBlock		      "Mult4"
+	      SrcPort		      1
+	      Points		      [10, 0]
+	      DstBlock		      "Adder5"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Mult3"
+	      SrcPort		      1
+	      Points		      [24, 0; 0, 170]
+	      DstBlock		      "Adder5"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Adder5"
+	      SrcPort		      1
+	      Points		      [-178, 0; 0, 140; 121, 0]
+	      Branch {
+		Points			[0, 125]
+		DstBlock		"lin_addr"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"Mult"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Delay"
+	      SrcPort		      1
+	      DstBlock		      "Mult2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Delay1"
+	      SrcPort		      1
+	      DstBlock		      "Mult1"
+	      DstPort		      1
+	    }
 	    Annotation {
 	      SID		      "1065"
 	      Name		      "express current index \nrelative to center of image"
-	      Position		      [301, 157, 429, 187]
-	      AutoSize		      on
-	      WordWrap		      off
+	      Position		      [365, 189]
 	      BackgroundColor	      "[0.870588, 0.866667, 0.862745]"
 	      ZOrder		      -1
 	      FontName		      "Arial"
@@ -3070,9 +3194,7 @@ Model {
 	    Annotation {
 	      SID		      "1066"
 	      Name		      "calculate (1 - K*r^2)"
-	      Position		      [431, 427, 528, 443]
-	      AutoSize		      on
-	      WordWrap		      off
+	      Position		      [479, 445]
 	      BackgroundColor	      "[0.870588, 0.866667, 0.862745]"
 	      ZOrder		      -2
 	      FontName		      "Arial"
@@ -3081,9 +3203,7 @@ Model {
 	    Annotation {
 	      SID		      "1067"
 	      Name		      "x_dist = x_cur (1 - k*r)\ny_dist = y_cur (1 - k*r)"
-	      Position		      [611, 157, 720, 187]
-	      AutoSize		      on
-	      WordWrap		      off
+	      Position		      [665, 189]
 	      BackgroundColor	      "[0.870588, 0.866667, 0.862745]"
 	      ZOrder		      -3
 	      FontName		      "Arial"
@@ -3092,9 +3212,7 @@ Model {
 	    Annotation {
 	      SID		      "1068"
 	      Name		      "express distorted index \nas absolute index"
-	      Position		      [826, 157, 943, 187]
-	      AutoSize		      on
-	      WordWrap		      off
+	      Position		      [884, 189]
 	      BackgroundColor	      "[0.870588, 0.866667, 0.862745]"
 	      ZOrder		      -4
 	      FontName		      "Arial"
@@ -3409,28 +3527,24 @@ Model {
 		  IconDisplay		  "Port number"
 		}
 		Line {
-		  ZOrder		  1
 		  SrcBlock		  "row_in"
 		  SrcPort		  1
 		  DstBlock		  "Convert"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  2
 		  SrcBlock		  "Convert"
 		  SrcPort		  1
 		  DstBlock		  "row_out"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  3
 		  SrcBlock		  "col_in"
 		  SrcPort		  1
 		  DstBlock		  "Convert1"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  4
 		  SrcBlock		  "Convert1"
 		  SrcPort		  1
 		  DstBlock		  "col_out"
@@ -3439,9 +3553,7 @@ Model {
 		Annotation {
 		  SID			  "1069"
 		  Name			  "performs truncation"
-		  Position		  [166, 37, 262, 53]
-		  AutoSize		  on
-		  WordWrap		  off
+		  Position		  [214, 55]
 		  BackgroundColor	  "[0.870588, 0.866667, 0.862745]"
 		  ZOrder		  -1
 		  FontName		  "Arial"
@@ -3677,28 +3789,24 @@ Model {
 		  IconDisplay		  "Port number"
 		}
 		Line {
-		  ZOrder		  1
 		  SrcBlock		  "Convert"
 		  SrcPort		  1
 		  DstBlock		  "row_out"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  2
 		  SrcBlock		  "Convert1"
 		  SrcPort		  1
 		  DstBlock		  "col_out"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  3
 		  SrcBlock		  "row_in"
 		  SrcPort		  1
 		  DstBlock		  "Convert"
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  4
 		  SrcBlock		  "col_in"
 		  SrcPort		  1
 		  DstBlock		  "Convert1"
@@ -3707,9 +3815,7 @@ Model {
 		Annotation {
 		  SID			  "1070"
 		  Name			  "performs rounding"
-		  Position		  [196, 32, 287, 48]
-		  AutoSize		  on
-		  WordWrap		  off
+		  Position		  [241, 50]
 		  BackgroundColor	  "[0.870588, 0.866667, 0.862745]"
 		  ZOrder		  -1
 		  FontName		  "Arial"
@@ -3802,90 +3908,75 @@ Model {
 	      IconDisplay	      "Port number"
 	    }
 	    Line {
-	      ZOrder		      1
 	      SrcBlock		      "Const Mult"
 	      SrcPort		      1
 	      DstBlock		      "Adder1"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      2
 	      SrcBlock		      "dist_row_index"
 	      SrcPort		      1
 	      Points		      [80, 0]
 	      Branch {
-		ZOrder			3
 		DstBlock		"Nearest Neighbor"
 		DstPort			1
 	      }
 	      Branch {
-		ZOrder			4
 		Points			[0, 145]
 		DstBlock		"Linear Interpol"
 		DstPort			1
 	      }
 	    }
 	    Line {
-	      ZOrder		      5
 	      SrcBlock		      "dist_col_index"
 	      SrcPort		      1
 	      Points		      [60, 0]
 	      Branch {
-		ZOrder			6
 		DstBlock		"Nearest Neighbor"
 		DstPort			2
 	      }
 	      Branch {
-		ZOrder			7
 		Points			[0, 145]
 		DstBlock		"Linear Interpol"
 		DstPort			2
 	      }
 	    }
 	    Line {
-	      ZOrder		      8
 	      SrcBlock		      "Nearest Neighbor"
 	      SrcPort		      1
 	      Points		      [15, 0]
 	      Branch {
-		ZOrder			24
 		Points			[0, -220]
 		DstBlock		"current_lin_addr"
 		DstPort			1
 	      }
 	      Branch {
-		ZOrder			23
 		DstBlock		"Mux"
 		DstPort			2
 	      }
 	    }
 	    Line {
-	      ZOrder		      9
 	      SrcBlock		      "Linear Interpol"
 	      SrcPort		      1
 	      Points		      [37, 0]
 	      Branch {
-		ZOrder			22
 		Points			[0, -325]
 		DstBlock		"distorded_lin_addr"
 		DstPort			1
 	      }
 	      Branch {
-		ZOrder			21
 		Points			[33, 0; 0, -115]
 		DstBlock		"Mux"
 		DstPort			3
 	      }
 	    }
 	    Line {
-	      ZOrder		      10
 	      SrcBlock		      "Linear Interpol"
 	      SrcPort		      2
 	      DstBlock		      "Mux1"
 	      DstPort		      3
 	    }
 	    Line {
-	      ZOrder		      11
 	      SrcBlock		      "Nearest Neighbor"
 	      SrcPort		      2
 	      Points		      [120, 0; 0, 115]
@@ -3893,14 +3984,12 @@ Model {
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      12
 	      SrcBlock		      "Mux"
 	      SrcPort		      1
 	      DstBlock		      "Const Mult"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      13
 	      SrcBlock		      "Mux1"
 	      SrcPort		      1
 	      Points		      [85, 0; 0, -115]
@@ -3908,45 +3997,38 @@ Model {
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      14
 	      SrcBlock		      "aaa1"
 	      SrcPort		      1
 	      Points		      [5, 0]
 	      Branch {
-		ZOrder			15
 		DstBlock		"Mux"
 		DstPort			1
 	      }
 	      Branch {
-		ZOrder			16
 		Points			[0, 160]
 		DstBlock		"Mux1"
 		DstPort			1
 	      }
 	    }
 	    Line {
-	      ZOrder		      17
 	      SrcBlock		      "Adder1"
 	      SrcPort		      1
 	      DstBlock		      "dist_lin_addr"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      18
 	      SrcBlock		      "current_lin_addr"
 	      SrcPort		      1
 	      DstBlock		      "Mux2"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      19
 	      SrcBlock		      "distorded_lin_addr"
 	      SrcPort		      1
 	      DstBlock		      "Mux2"
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      20
 	      SrcBlock		      "Mux2"
 	      SrcPort		      1
 	      DstBlock		      "Compare_lin_addr"
@@ -3955,9 +4037,7 @@ Model {
 	    Annotation {
 	      SID		      "1071"
 	      Name		      "calculate distorted\nlinear address"
-	      Position		      [781, 217, 870, 247]
-	      AutoSize		      on
-	      WordWrap		      off
+	      Position		      [825, 249]
 	      BackgroundColor	      "[0.870588, 0.866667, 0.862745]"
 	      ZOrder		      -1
 	      FontName		      "Arial"
@@ -3966,9 +4046,7 @@ Model {
 	    Annotation {
 	      SID		      "1072"
 	      Name		      "select interpolation method"
-	      Position		      [504, 222, 636, 238]
-	      AutoSize		      on
-	      WordWrap		      off
+	      Position		      [570, 240]
 	      HorizontalAlignment     "left"
 	      BackgroundColor	      "[0.870588, 0.866667, 0.862745]"
 	      ZOrder		      -2
@@ -3983,9 +4061,7 @@ Model {
 	      " points to the top-left pixel of the 4 pixels surrounding the point dist_row/col_index.\n  This is accomplished"
 	      " by truncating dist_row/col_index. The so found pixel address points to the \n  top-left pixel of 4 pixels (a,b"
 	      ",c,d) that must be used for linear interpolation."
-	      Position		      [224, 712, 710, 868]
-	      AutoSize		      on
-	      WordWrap		      off
+	      Position		      [467, 870]
 	      HorizontalAlignment     "left"
 	      BackgroundColor	      "[0.870588, 0.866667, 0.862745]"
 	      ZOrder		      -3
@@ -5093,56 +5169,48 @@ Model {
 	      IconDisplay	      "Port number"
 	    }
 	    Line {
-	      ZOrder		      1
 	      SrcBlock		      "aaa1"
 	      SrcPort		      1
 	      DstBlock		      "Delay3"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      2
 	      SrcBlock		      "Correction \nFacor1"
 	      SrcPort		      1
 	      DstBlock		      "Frame Buffer 1"
 	      DstPort		      6
 	    }
 	    Line {
-	      ZOrder		      3
 	      SrcBlock		      "Correction \nFacor2"
 	      SrcPort		      1
 	      DstBlock		      "Frame Buffer 2"
 	      DstPort		      6
 	    }
 	    Line {
-	      ZOrder		      4
 	      SrcBlock		      "Correction \nFacor4"
 	      SrcPort		      1
 	      DstBlock		      "Frame Buffer 2"
 	      DstPort		      5
 	    }
 	    Line {
-	      ZOrder		      5
 	      SrcBlock		      "Correction \nFacor5"
 	      SrcPort		      1
 	      DstBlock		      "Frame Buffer 1"
 	      DstPort		      5
 	    }
 	    Line {
-	      ZOrder		      6
 	      SrcBlock		      "Mux"
 	      SrcPort		      1
 	      DstBlock		      "pixel_c"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      7
 	      SrcBlock		      "Frame Buffer 2"
 	      SrcPort		      2
 	      DstBlock		      "Mux"
 	      DstPort		      3
 	    }
 	    Line {
-	      ZOrder		      8
 	      SrcBlock		      "Frame Buffer 1"
 	      SrcPort		      2
 	      Points		      [50, 0; 0, 255]
@@ -5150,100 +5218,85 @@ Model {
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      9
 	      SrcBlock		      "aaa3"
 	      SrcPort		      1
 	      DstBlock		      "Delay2"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      10
 	      SrcBlock		      "Inverter2"
 	      SrcPort		      1
 	      DstBlock		      " 1"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      11
 	      SrcBlock		      "aaa2"
 	      SrcPort		      1
 	      DstBlock		      "Delay4"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      12
 	      SrcBlock		      "Logical"
 	      SrcPort		      1
 	      DstBlock		      "Delay"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      13
 	      SrcBlock		      "Delay"
 	      SrcPort		      1
 	      Points		      [40, 0]
 	      Branch {
-		ZOrder			14
 		Points			[0, -45; -175, 0; 0, 35]
 		DstBlock		"Logical"
 		DstPort			1
 	      }
 	      Branch {
-		ZOrder			15
 		Points			[0, 35]
 		DstBlock		"Inverter2"
 		DstPort			1
 	      }
 	      Branch {
-		ZOrder			16
 		DstBlock		" "
 		DstPort			1
 	      }
 	    }
 	    Line {
-	      ZOrder		      17
 	      SrcBlock		      "vsync"
 	      SrcPort		      1
 	      DstBlock		      "Logical"
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      18
 	      SrcBlock		      "Delay2"
 	      SrcPort		      1
 	      DstBlock		      "Mux"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      19
 	      SrcBlock		      "aaa4"
 	      SrcPort		      1
 	      DstBlock		      "Delay1"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      20
 	      SrcBlock		      "Delay1"
 	      SrcPort		      1
 	      DstBlock		      "Mux2"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      21
 	      SrcBlock		      "Frame Buffer 1"
 	      SrcPort		      1
 	      DstBlock		      "Mux2"
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      22
 	      SrcBlock		      "Mux2"
 	      SrcPort		      1
 	      DstBlock		      "pixel_a"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      23
 	      SrcBlock		      "Frame Buffer 2"
 	      SrcPort		      1
 	      Points		      [70, 0; 0, -255]
@@ -5251,26 +5304,21 @@ Model {
 	      DstPort		      3
 	    }
 	    Line {
-	      ZOrder		      24
 	      SrcBlock		      "addr_read"
 	      SrcPort		      1
 	      Points		      [20, 0]
 	      Branch {
-		ZOrder			25
 		Points			[0, 70]
 		DstBlock		"Adder"
 		DstPort			1
 	      }
 	      Branch {
-		ZOrder			26
 		Points			[110, 0]
 		Branch {
-		  ZOrder		  27
 		  DstBlock		  "Mux3"
 		  DstPort		  3
 		}
 		Branch {
-		  ZOrder		  28
 		  Points		  [0, -290]
 		  DstBlock		  "Mux1"
 		  DstPort		  3
@@ -5278,149 +5326,125 @@ Model {
 	      }
 	    }
 	    Line {
-	      ZOrder		      29
 	      SrcBlock		      "Correction \nFacor3"
 	      SrcPort		      1
 	      DstBlock		      "Adder"
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      30
 	      SrcBlock		      "addr_write"
 	      SrcPort		      1
 	      Points		      [155, 0]
 	      Branch {
-		ZOrder			31
 		Points			[0, 290]
 		DstBlock		"Mux3"
 		DstPort			2
 	      }
 	      Branch {
-		ZOrder			32
 		DstBlock		"Mux1"
 		DstPort			2
 	      }
 	    }
 	    Line {
-	      ZOrder		      33
 	      SrcBlock		      "Mux1"
 	      SrcPort		      1
 	      DstBlock		      "Frame Buffer 1"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      34
 	      SrcBlock		      "Mux3"
 	      SrcPort		      1
 	      DstBlock		      "Frame Buffer 2"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      35
 	      SrcBlock		      "data_in"
 	      SrcPort		      1
 	      DstBlock		      "Delay6"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      36
 	      SrcBlock		      "Delay6"
 	      SrcPort		      1
 	      Points		      [30, 0]
 	      Branch {
-		ZOrder			37
 		Points			[0, 225]
 		DstBlock		"Frame Buffer 2"
 		DstPort			2
 	      }
 	      Branch {
-		ZOrder			38
 		Points			[0, -65]
 		DstBlock		"Frame Buffer 1"
 		DstPort			2
 	      }
 	    }
 	    Line {
-	      ZOrder		      39
 	      SrcBlock		      "Adder"
 	      SrcPort		      1
 	      Points		      [25, 0; 0, 30]
 	      Branch {
-		ZOrder			40
 		DstBlock		"Relational"
 		DstPort			2
 	      }
 	      Branch {
-		ZOrder			41
 		Points			[0, 55]
 		DstBlock		"Mux4"
 		DstPort			3
 	      }
 	    }
 	    Line {
-	      ZOrder		      42
 	      SrcBlock		      "Correction \nFacor6"
 	      SrcPort		      1
 	      Points		      [10, 0; 0, 30]
 	      Branch {
-		ZOrder			43
 		DstBlock		"Relational"
 		DstPort			1
 	      }
 	      Branch {
-		ZOrder			44
 		Points			[0, 50]
 		DstBlock		"Mux4"
 		DstPort			2
 	      }
 	    }
 	    Line {
-	      ZOrder		      45
 	      SrcBlock		      "Relational"
 	      SrcPort		      1
 	      DstBlock		      "Mux4"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      46
 	      SrcBlock		      "Mux4"
 	      SrcPort		      1
 	      Points		      [55, 0; 0, -50]
 	      Branch {
-		ZOrder			47
 		DstBlock		"Frame Buffer 2"
 		DstPort			4
 	      }
 	      Branch {
-		ZOrder			48
 		Points			[0, -290]
 		DstBlock		"Frame Buffer 1"
 		DstPort			4
 	      }
 	    }
 	    Line {
-	      ZOrder		      49
 	      SrcBlock		      "aaa5"
 	      SrcPort		      1
 	      DstBlock		      "Mux1"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      50
 	      SrcBlock		      "aaa6"
 	      SrcPort		      1
 	      DstBlock		      "Mux3"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      51
 	      SrcBlock		      "Delay3"
 	      SrcPort		      1
 	      DstBlock		      "Frame Buffer 1"
 	      DstPort		      3
 	    }
 	    Line {
-	      ZOrder		      52
 	      SrcBlock		      "Delay4"
 	      SrcPort		      1
 	      DstBlock		      "Frame Buffer 2"
@@ -5429,9 +5453,7 @@ Model {
 	    Annotation {
 	      SID		      "1074"
 	      Name		      "Toggle write enable signal\nwith each vsync pulse"
-	      Position		      [251, 152, 379, 182]
-	      AutoSize		      on
-	      WordWrap		      off
+	      Position		      [315, 184]
 	      BackgroundColor	      "[0.870588, 0.866667, 0.862745]"
 	      ZOrder		      -1
 	      FontName		      "Arial"
@@ -5440,9 +5462,7 @@ Model {
 	    Annotation {
 	      SID		      "1075"
 	      Name		      "inverted write enable\nfor ping-pong buffer"
-	      Position		      [431, 152, 534, 182]
-	      AutoSize		      on
-	      WordWrap		      off
+	      Position		      [482, 184]
 	      BackgroundColor	      "[0.870588, 0.866667, 0.862745]"
 	      ZOrder		      -2
 	      FontName		      "Arial"
@@ -5451,9 +5471,7 @@ Model {
 	    Annotation {
 	      SID		      "1076"
 	      Name		      "address port B \nwrite: --\nread: addr_read + # of col (limited to # of pixels)"
-	      Position		      [776, 252, 1010, 296]
-	      AutoSize		      on
-	      WordWrap		      off
+	      Position		      [893, 298]
 	      HorizontalAlignment     "left"
 	      BackgroundColor	      "[0.870588, 0.866667, 0.862745]"
 	      ZOrder		      -3
@@ -5463,9 +5481,7 @@ Model {
 	    Annotation {
 	      SID		      "1077"
 	      Name		      "address port A\nwrite: addr_write\nread: addr_read"
-	      Position		      [655, 252, 737, 296]
-	      AutoSize		      on
-	      WordWrap		      off
+	      Position		      [696, 298]
 	      HorizontalAlignment     "left"
 	      BackgroundColor	      "[0.870588, 0.866667, 0.862745]"
 	      ZOrder		      -4
@@ -5595,28 +5611,24 @@ Model {
 	      IconDisplay	      "Port number"
 	    }
 	    Line {
-	      ZOrder		      1
 	      SrcBlock		      "aaa1"
 	      SrcPort		      1
 	      DstBlock		      "Mux"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      2
 	      SrcBlock		      "Mux"
 	      SrcPort		      1
 	      DstBlock		      "data_out"
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      3
 	      SrcBlock		      "pixel_a"
 	      SrcPort		      1
 	      DstBlock		      "Mux"
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      4
 	      SrcBlock		      "pixel_c"
 	      SrcPort		      1
 	      DstBlock		      "Mux"
@@ -5625,9 +5637,7 @@ Model {
 	    Annotation {
 	      SID		      "1078"
 	      Name		      "select interpolation method"
-	      Position		      [244, 67, 376, 83]
-	      AutoSize		      on
-	      WordWrap		      off
+	      Position		      [310, 85]
 	      HorizontalAlignment     "left"
 	      BackgroundColor	      "[0.870588, 0.866667, 0.862745]"
 	      ZOrder		      -1
@@ -5969,182 +5979,154 @@ Model {
 	  IconDisplay		  "Port number"
 	}
 	Line {
-	  ZOrder		  1
 	  SrcBlock		  "vdi"
 	  SrcPort		  1
 	  DstBlock		  "video_data_i"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  2
 	  SrcBlock		  "video_data_o"
 	  SrcPort		  1
 	  DstBlock		  "vdo"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  3
 	  SrcBlock		  "vsi"
 	  SrcPort		  1
 	  DstBlock		  "vsync_i"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  4
 	  SrcBlock		  "hsi"
 	  SrcPort		  1
 	  DstBlock		  "hsync_i"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  5
 	  SrcBlock		  "vsync_o"
 	  SrcPort		  1
 	  DstBlock		  "vso"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  6
 	  SrcBlock		  "hsync_o"
 	  SrcPort		  1
 	  DstBlock		  "hso"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  7
 	  SrcBlock		  "vsync_i"
 	  SrcPort		  1
 	  Points		  [55, 0]
 	  Branch {
-	    ZOrder		    8
 	    Labels		    [0, 0]
 	    Points		    [0, 130]
 	    DstBlock		    "Address Generation"
 	    DstPort		    1
 	  }
 	  Branch {
-	    ZOrder		    9
 	    DstBlock		    "D1"
 	    DstPort		    1
 	  }
 	}
 	Line {
-	  ZOrder		  10
 	  SrcBlock		  "hsync_i"
 	  SrcPort		  1
 	  Points		  [30, 0]
 	  Branch {
-	    ZOrder		    11
 	    Labels		    [0, 0]
 	    Points		    [0, 175]
 	    DstBlock		    "Address Generation"
 	    DstPort		    2
 	  }
 	  Branch {
-	    ZOrder		    12
 	    DstBlock		    "D4"
 	    DstPort		    1
 	  }
 	}
 	Line {
-	  ZOrder		  13
 	  SrcBlock		  "Address Generation"
 	  SrcPort		  3
 	  Points		  [20, 0]
 	  Branch {
-	    ZOrder		    14
-	    DstBlock		    "Index Calculation"
-	    DstPort		    3
+	    Points		    [15, 0; 15, 0]
 	  }
 	  Branch {
-	    ZOrder		    15
 	    Points		    [0, 60]
 	    DstBlock		    "D6"
 	    DstPort		    1
 	  }
 	}
 	Line {
-	  ZOrder		  18
 	  SrcBlock		  "D2"
 	  SrcPort		  1
 	  DstBlock		  "D14"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  19
 	  SrcBlock		  "D3"
 	  SrcPort		  1
 	  DstBlock		  "D15"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  20
 	  SrcBlock		  "video_data_i"
 	  SrcPort		  1
 	  DstBlock		  "D5"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  21
 	  SrcBlock		  "Address Generation"
 	  SrcPort		  1
+	  Points		  [22, 0; 0, 15]
 	  DstBlock		  "Index Calculation"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  22
 	  SrcBlock		  "Address Generation"
 	  SrcPort		  2
+	  Points		  [22, 0; 0, 45]
 	  DstBlock		  "Index Calculation"
 	  DstPort		  2
 	}
 	Line {
-	  ZOrder		  23
 	  SrcBlock		  "Index Interpolation"
 	  SrcPort		  1
 	  Points		  [15, 0]
 	  Branch {
-	    ZOrder		    24
 	    Points		    [0, -25]
 	    DstBlock		    "Ping-Pong Buffer"
 	    DstPort		    2
 	  }
 	  Branch {
-	    ZOrder		    25
 	    Points		    [0, 305]
 	    DstBlock		    "distorded_lin_addr"
 	    DstPort		    1
 	  }
 	}
 	Line {
-	  ZOrder		  26
 	  SrcBlock		  "Index Calculation"
 	  SrcPort		  1
 	  Points		  [10, 0]
 	  Branch {
-	    ZOrder		    27
 	    DstBlock		    "Index Interpolation"
 	    DstPort		    1
 	  }
 	  Branch {
-	    ZOrder		    28
 	    Points		    [0, 245]
 	    DstBlock		    "D17"
 	    DstPort		    1
 	  }
 	}
 	Line {
-	  ZOrder		  29
 	  SrcBlock		  "Index Calculation"
 	  SrcPort		  2
 	  Points		  [30, 0]
 	  Branch {
-	    ZOrder		    30
 	    DstBlock		    "Index Interpolation"
 	    DstPort		    2
 	  }
 	  Branch {
-	    ZOrder		    31
 	    Points		    [0, 115]
 	    DstBlock		    "D16"
 	    DstPort		    1
@@ -6152,7 +6134,6 @@ Model {
 	}
 	Line {
 	  Name			  "current_lin_addr"
-	  ZOrder		  32
 	  Labels		  [1, 1]
 	  SrcBlock		  "current_lin_addr"
 	  SrcPort		  1
@@ -6161,7 +6142,6 @@ Model {
 	}
 	Line {
 	  Name			  "distorted_lin_addr"
-	  ZOrder		  33
 	  Labels		  [1, 1]
 	  SrcBlock		  "distorded_lin_addr"
 	  SrcPort		  1
@@ -6169,105 +6149,89 @@ Model {
 	  DstPort		  2
 	}
 	Line {
-	  ZOrder		  77
 	  SrcBlock		  "Mux1"
 	  SrcPort		  1
 	  DstBlock		  "Compare_lin_addr"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  35
 	  SrcBlock		  "D1"
 	  SrcPort		  1
 	  DstBlock		  "D10"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  36
 	  SrcBlock		  "D4"
 	  SrcPort		  1
 	  DstBlock		  "D11"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  37
 	  SrcBlock		  "D5"
 	  SrcPort		  1
 	  DstBlock		  "D7"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  38
 	  SrcBlock		  "D7"
 	  SrcPort		  1
 	  DstBlock		  "D9"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  39
 	  SrcBlock		  "D6"
 	  SrcPort		  1
 	  DstBlock		  "D8"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  40
 	  SrcBlock		  "D10"
 	  SrcPort		  1
 	  DstBlock		  "D12"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  41
 	  SrcBlock		  "D11"
 	  SrcPort		  1
 	  DstBlock		  "D13"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  42
 	  SrcBlock		  "D12"
 	  SrcPort		  1
 	  Points		  [80, 0]
 	  Branch {
-	    ZOrder		    43
 	    DstBlock		    "D2"
 	    DstPort		    1
 	  }
 	  Branch {
-	    ZOrder		    44
 	    Points		    [0, 105]
 	    DstBlock		    "Ping-Pong Buffer"
 	    DstPort		    1
 	  }
 	}
 	Line {
-	  ZOrder		  45
 	  SrcBlock		  "D13"
 	  SrcPort		  1
 	  DstBlock		  "D3"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  46
 	  SrcBlock		  "D8"
 	  SrcPort		  1
 	  Points		  [74, 0]
 	  Branch {
-	    ZOrder		    63
 	    Points		    [0, 145]
 	    DstBlock		    "current_lin_addr"
 	    DstPort		    1
 	  }
 	  Branch {
-	    ZOrder		    62
 	    Points		    [1, 0; 0, -100]
 	    DstBlock		    "Ping-Pong Buffer"
 	    DstPort		    3
 	  }
 	}
 	Line {
-	  ZOrder		  47
 	  SrcBlock		  "D9"
 	  SrcPort		  1
 	  Points		  [90, 0; 0, -175]
@@ -6275,56 +6239,48 @@ Model {
 	  DstPort		  4
 	}
 	Line {
-	  ZOrder		  48
 	  SrcBlock		  "K"
 	  SrcPort		  1
 	  DstBlock		  " "
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  49
 	  SrcBlock		  "K1"
 	  SrcPort		  1
 	  DstBlock		  " 1"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  50
 	  SrcBlock		  "D14"
 	  SrcPort		  1
 	  DstBlock		  "vsync_o"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  51
 	  SrcBlock		  "D15"
 	  SrcPort		  1
 	  DstBlock		  "hsync_o"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  52
 	  SrcBlock		  "D16"
 	  SrcPort		  1
 	  DstBlock		  "D19"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  53
 	  SrcBlock		  "D17"
 	  SrcPort		  1
 	  DstBlock		  "D18"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  54
 	  SrcBlock		  "Pixel Interpolation"
 	  SrcPort		  1
 	  DstBlock		  "video_data_o"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  55
 	  SrcBlock		  "D19"
 	  SrcPort		  1
 	  Points		  [80, 0; 0, -145]
@@ -6332,7 +6288,6 @@ Model {
 	  DstPort		  3
 	}
 	Line {
-	  ZOrder		  56
 	  SrcBlock		  "D18"
 	  SrcPort		  1
 	  Points		  [95, 0; 0, -145]
@@ -6340,7 +6295,6 @@ Model {
 	  DstPort		  4
 	}
 	Line {
-	  ZOrder		  57
 	  SrcBlock		  "Ping-Pong Buffer"
 	  SrcPort		  1
 	  Points		  [10, 0; 0, -20]
@@ -6348,7 +6302,6 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  58
 	  SrcBlock		  "Ping-Pong Buffer"
 	  SrcPort		  2
 	  Points		  [20, 0; 0, -65]
@@ -6358,9 +6311,7 @@ Model {
 	Annotation {
 	  SID			  "1079"
 	  Name			  "Compensate delay\nof Ping-Pong Buffer"
-	  Position		  [836, 42, 934, 72]
-	  AutoSize		  on
-	  WordWrap		  off
+	  Position		  [885, 74]
 	  BackgroundColor	  "[0.870588, 0.866667, 0.862745]"
 	  ZOrder		  -1
 	  FontName		  "Arial"
@@ -6369,9 +6320,7 @@ Model {
 	Annotation {
 	  SID			  "1080"
 	  Name			  "Compensate delay\nin index calculation"
-	  Position		  [466, 42, 560, 72]
-	  AutoSize		  on
-	  WordWrap		  off
+	  Position		  [513, 74]
 	  BackgroundColor	  "[0.870588, 0.866667, 0.862745]"
 	  ZOrder		  -2
 	  FontName		  "Arial"
@@ -6380,9 +6329,7 @@ Model {
 	Annotation {
 	  SID			  "1081"
 	  Name			  "Compensate delay\nin index interpolation"
-	  Position		  [641, 42, 743, 72]
-	  AutoSize		  on
-	  WordWrap		  off
+	  Position		  [692, 74]
 	  BackgroundColor	  "[0.870588, 0.866667, 0.862745]"
 	  ZOrder		  -3
 	  FontName		  "Arial"
@@ -6391,9 +6338,7 @@ Model {
 	Annotation {
 	  SID			  "1082"
 	  Name			  "Compensate delay\nin address generation"
-	  Position		  [286, 42, 392, 72]
-	  AutoSize		  on
-	  WordWrap		  off
+	  Position		  [339, 74]
 	  BackgroundColor	  "[0.870588, 0.866667, 0.862745]"
 	  ZOrder		  -4
 	  FontName		  "Arial"
@@ -6402,9 +6347,7 @@ Model {
 	Annotation {
 	  SID			  "1083"
 	  Name			  "Configuration Parameters"
-	  Position		  [101, 552, 275, 570]
-	  AutoSize		  on
-	  WordWrap		  off
+	  Position		  [188, 572]
 	  BackgroundColor	  "magenta"
 	  ZOrder		  -5
 	  FontName		  "Arial"
@@ -6414,9 +6357,7 @@ Model {
 	Annotation {
 	  SID			  "1084"
 	  Name			  "Lens correction factor K"
-	  Position		  [81, 582, 209, 599]
-	  AutoSize		  on
-	  WordWrap		  off
+	  Position		  [145, 601]
 	  BackgroundColor	  "magenta"
 	  ZOrder		  -6
 	  FontName		  "Arial"
@@ -6425,9 +6366,7 @@ Model {
 	Annotation {
 	  SID			  "1085"
 	  Name			  "Interpolation Method\n0 = nearest neighbor\n1 = linear interpolation"
-	  Position		  [254, 572, 374, 619]
-	  AutoSize		  on
-	  WordWrap		  off
+	  Position		  [314, 621]
 	  HorizontalAlignment	  "left"
 	  BackgroundColor	  "magenta"
 	  ZOrder		  -7
@@ -6437,9 +6376,7 @@ Model {
 	Annotation {
 	  SID			  "1086"
 	  Name			  "Compensate delay\nin index interpolation"
-	  Position		  [1016, 42, 1118, 72]
-	  AutoSize		  on
-	  WordWrap		  off
+	  Position		  [1067, 74]
 	  BackgroundColor	  "[0.870588, 0.866667, 0.862745]"
 	  ZOrder		  -8
 	  FontName		  "Arial"
@@ -6517,10 +6454,9 @@ Model {
       Position		      [80, 293, 210, 317]
       ZOrder		      -6
       BackgroundColor	      "orange"
-      LibraryVersion	      "1.733"
+      LibraryVersion	      "1.727"
       SourceBlock	      "dspsrcs4/Signal From\nWorkspace"
       SourceType	      "Signal From Workspace"
-      ContentPreviewEnabled   off
       X			      "[ zeros(1,ImgX-1) 1 ]"
       Ts		      "1"
       nsamps		      "1"
@@ -6535,10 +6471,9 @@ Model {
       Position		      [75, 377, 205, 403]
       ZOrder		      -7
       BackgroundColor	      "orange"
-      LibraryVersion	      "1.733"
+      LibraryVersion	      "1.727"
       SourceBlock	      "dspsrcs4/Signal From\nWorkspace"
       SourceType	      "Signal From Workspace"
-      ContentPreviewEnabled   off
       X			      "[ ImgStrmIn(:) ]"
       Ts		      "1"
       nsamps		      "1"
@@ -6553,10 +6488,9 @@ Model {
       Position		      [75, 208, 205, 232]
       ZOrder		      -8
       BackgroundColor	      "orange"
-      LibraryVersion	      "1.733"
+      LibraryVersion	      "1.727"
       SourceBlock	      "dspsrcs4/Signal From\nWorkspace"
       SourceType	      "Signal From Workspace"
-      ContentPreviewEnabled   off
       X			      "[ zeros(1,Npxl-1) 1 ]"
       Ts		      "1"
       nsamps		      "1"
@@ -6564,72 +6498,60 @@ Model {
       ignoreOrWarnInputAndFrameLengths off
     }
     Line {
-      ZOrder		      1
       SrcBlock		      "vsync"
       SrcPort		      1
       DstBlock		      "FPGA_lens_correct"
       DstPort		      1
     }
     Line {
-      ZOrder		      2
       SrcBlock		      "hsync"
       SrcPort		      1
       DstBlock		      "FPGA_lens_correct"
       DstPort		      2
     }
     Line {
-      ZOrder		      3
       SrcBlock		      "video_data"
       SrcPort		      1
       DstBlock		      "FPGA_lens_correct"
       DstPort		      3
     }
     Line {
-      ZOrder		      4
       SrcBlock		      "FPGA_lens_correct"
       SrcPort		      1
       Points		      [75, 0]
       Branch {
-	ZOrder			5
 	DstBlock		"Sync Scope"
 	DstPort			1
       }
       Branch {
-	ZOrder			6
 	Points			[0, 260]
 	DstBlock		"Vsync\nto Workspace"
 	DstPort			1
       }
     }
     Line {
-      ZOrder		      7
       SrcBlock		      "FPGA_lens_correct"
       SrcPort		      2
       Points		      [45, 0]
       Branch {
-	ZOrder			8
 	DstBlock		"Sync Scope"
 	DstPort			2
       }
       Branch {
-	ZOrder			9
 	Points			[0, 240]
 	DstBlock		"Hsync\nto Workspace"
 	DstPort			1
       }
     }
     Line {
-      ZOrder		      10
       SrcBlock		      "FPGA_lens_correct"
       SrcPort		      3
       Points		      [30, 0]
       Branch {
-	ZOrder			11
 	DstBlock		"Sync Scope"
 	DstPort			3
       }
       Branch {
-	ZOrder			12
 	Points			[0, 220]
 	DstBlock		"Image Stream\nto Workspace"
 	DstPort			1
@@ -6639,9 +6561,7 @@ Model {
       SID		      "1088"
       Name		      "Top-Level Testbench\nNote the link to the Matlab workspace through the use of variables. \nThis als"
       "o works with Xilinx blocks within the FPGA part of the model."
-      Position		      [419, 42, 874, 103]
-      AutoSize		      on
-      WordWrap		      off
+      Position		      [646, 105]
       ForegroundColor	      "white"
       BackgroundColor	      "black"
       DropShadow	      on
@@ -6652,9 +6572,7 @@ Model {
     Annotation {
       SID		      "1089"
       Name		      "Stimuli Application"
-      Position		      [134, 144, 244, 163]
-      AutoSize		      on
-      WordWrap		      off
+      Position		      [189, 165]
       BackgroundColor	      "orange"
       DropShadow	      on
       ZOrder		      -2
@@ -6664,9 +6582,7 @@ Model {
     Annotation {
       SID		      "1090"
       Name		      "Response Checking"
-      Position		      [654, 144, 766, 163]
-      AutoSize		      on
-      WordWrap		      off
+      Position		      [710, 165]
       BackgroundColor	      "lightBlue"
       DropShadow	      on
       ZOrder		      -3
@@ -6676,9 +6592,7 @@ Model {
     Annotation {
       SID		      "1091"
       Name		      "Module under Test"
-      Position		      [394, 144, 501, 163]
-      AutoSize		      on
-      WordWrap		      off
+      Position		      [447, 165]
       BackgroundColor	      "[0.937255, 0.878431, 0.760784]"
       DropShadow	      on
       ZOrder		      -4
