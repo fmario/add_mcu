@@ -5,28 +5,18 @@ Matlab 8.1.0.604 (R2013a)               C:/Program Files/MATLAB/R2013a
 ISE                                     C:/Xilinx/13.3/ISE_DS/ISE
 --------------------------------------------------------------------------------
 Summary of Errors:
-Error 0001: Design Rule Check Failed
-     Block: 'sg_lens_correct/FPGA_lens_correct/ System Generator'
+Error 0001: Number of bits does not match word size of existing share...
+     Block: 'sg_lens_correct/FPGA_lens_correct/EDK Processor/To Register'
 --------------------------------------------------------------------------------
 
 Error 0001:
 
 Reported by:
-  'sg_lens_correct/FPGA_lens_correct/ System Generator'
+  'sg_lens_correct/FPGA_lens_correct/EDK Processor/To Register'
 
 Details:
-The "Simulink system period" setting on this System Generator
-token is not appropriate for the rates used in the design. 
-
-The current setting is:  1
-An appropriate setting is:  1/2
-
-Blocks with inappropriate periods included:
-  "sg_lens_correct/FPGA_lens_correct/video_data_o",  port: "dbl",
- sample period: 1/2
-  "sg_lens_correct/FPGA_lens_correct/video_data_o",  port:
-"gw_out_inport",  sample period: 1/2
-  "sg_lens_correct/FPGA_lens_correct/Up Sample",  port: "q", 
-sample period: 1/2
+Number of bits does not match word size of existing shared memory
+named "K" created by the "From Register" source.
+Error occurred during "Simulation Initialization".
 
 --------------------------------------------------------------------------------

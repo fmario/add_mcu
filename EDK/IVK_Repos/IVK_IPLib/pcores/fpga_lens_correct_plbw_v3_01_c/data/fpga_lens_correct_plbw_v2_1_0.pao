@@ -1,0 +1,18 @@
+#############################################################
+# Copyright (c) 1995-2015 Xilinx, Inc.  All rights reserved.
+# 
+# You may copy and modify these files for your own internal
+# use solely with Xilinx programmable logic devices and
+# Xilinx EDK system or create IP modules solely for Xilinx
+# programmable logic devices and Xilinx EDK system.
+# No rights are granted to distribute any files unless they
+# are distributed in Xilinx programmable logic devices.
+#
+# Peripheral Analyze Order (PAO) file
+# created by System Generator
+# 01.05.2015 17:20:25
+#############################################################
+
+lib fpga_lens_correct_plbw_v3_01_c fpga_lens_correct vhdl
+lib fpga_lens_correct_plbw_v3_01_c fpga_lens_correct_cw vhdl
+lib fpga_lens_correct_plbw_v3_01_c fpga_lens_correct_plbw vhdl

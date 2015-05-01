@@ -1,0 +1,1 @@
+run -ifn xst_fpga_lens_correct.prj -ifmt mixed -ofn fpga_lens_correct_cw.ngc -ofmt NGC -p xc6slx150t-3fgg676 -ent fpga_lens_correct_cw -keep_hierarchy NO -iobuf YES -bus_delimiter () -top fpga_lens_correct_cw -hierarchy_separator / -report_timing_constraint_problems warning -register_balancing no -iob Auto -uc fpga_lens_correct_cw.xcf -write_timing_constraints yes
